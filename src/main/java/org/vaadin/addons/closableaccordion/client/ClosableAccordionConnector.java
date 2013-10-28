@@ -1,7 +1,8 @@
-package com.vaadin.addon.closableaccordion.client;
+package org.vaadin.addons.closableaccordion.client;
 
-import com.vaadin.addon.closableaccordion.ClosableAccordion;
-import com.vaadin.addon.closableaccordion.client.VClosableAccordion.StackItem;
+import org.vaadin.addons.closableaccordion.ClosableAccordion;
+import org.vaadin.addons.closableaccordion.client.VClosableAccordion.StackItem;
+
 import com.vaadin.client.ApplicationConnection;
 import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ConnectorHierarchyChangeEvent;
@@ -12,6 +13,7 @@ import com.vaadin.client.ui.layout.MayScrollChildren;
 import com.vaadin.client.ui.tabsheet.TabsheetBaseConnector;
 import com.vaadin.shared.ui.Connect;
 
+@SuppressWarnings("serial")
 @Connect(ClosableAccordion.class)
 public class ClosableAccordionConnector extends TabsheetBaseConnector implements SimpleManagedLayout, MayScrollChildren {
 

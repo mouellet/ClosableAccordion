@@ -1,4 +1,4 @@
-package com.vaadin.addon.closableaccordion.client;
+package org.vaadin.addons.closableaccordion.client;
 
 import java.util.HashMap;
 import java.util.HashSet;

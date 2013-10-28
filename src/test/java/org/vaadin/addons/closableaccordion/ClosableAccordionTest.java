@@ -1,4 +1,4 @@
-package com.vaadin.addon.closableaccordion;
+package org.vaadin.addons.closableaccordion;
 
 import junit.framework.Assert;
 
