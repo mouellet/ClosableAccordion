@@ -100,11 +100,10 @@ public class VClosableAccordion extends VTabsheetBase {
     }
 
     /**
-     * This method tries to find out if a tab has been rendered with a different
-     * index previously. If this is the case it re-orders the children so the
-     * same StackItem is used for rendering this time. E.g. if the first tab has
-     * been removed all tabs which contain cached content must be moved 1 step
-     * up to preserve the cached content.
+     * This method tries to find out if a tab has been rendered with a different index previously.
+     * If this is the case it re-orders the children so the same StackItem is used for rendering
+     * this time. E.g. if the first tab has been removed all tabs which contain cached content must
+     * be moved 1 step up to preserve the cached content.
      * 
      * @param item
      * @param newIndex
@@ -123,8 +122,7 @@ public class VClosableAccordion extends VTabsheetBase {
         if (tabContent != null) {
             if (tabContent.getWidget() != itemWidget) {
                 /*
-                 * This is not the same widget as before, find out if it has
-                 * been moved
+                 * This is not the same widget as before, find out if it has been moved
                  */
                 int oldIndex = -1;
                 StackItem oldItem = null;
@@ -139,12 +137,11 @@ public class VClosableAccordion extends VTabsheetBase {
 
                 if (oldIndex != -1 && oldIndex > newIndex) {
                     /*
-                     * The tab has previously been rendered in another position
-                     * so we must move the cached content to correct position.
-                     * We move only items with oldIndex > newIndex to prevent
-                     * moving items already rendered in this update. If for
-                     * instance tabs 1,2,3 are removed and added as 3,2,1 we
-                     * cannot re-use "1" when we get to the third tab.
+                     * The tab has previously been rendered in another position so we must move the
+                     * cached content to correct position. We move only items with oldIndex >
+                     * newIndex to prevent moving items already rendered in this update. If for
+                     * instance tabs 1,2,3 are removed and added as 3,2,1 we cannot re-use "1" when
+                     * we get to the third tab.
                      */
                     insert(oldItem, getElement(), newIndex, true);
                     return oldItem;
@@ -245,10 +242,9 @@ public class VClosableAccordion extends VTabsheetBase {
 
             super.onBrowserEvent(event);
             /*
-            if (event.getTypeInt() == Event.ONLOAD) {
-                getTabsheet().tabSizeMightHaveChanged(getTab());
-            }
-            */
+             * if (event.getTypeInt() == Event.ONLOAD) {
+             * getTabsheet().tabSizeMightHaveChanged(getTab()); }
+             */
         }
 
         public StackItem getStackItem() {
@@ -258,8 +254,8 @@ public class VClosableAccordion extends VTabsheetBase {
         public void setRemovable(boolean removable) {
             this.removable = removable;
             if (removable && removeButton == null) {
-                removeButton = DOM.createSpan();
-                removeButton.setInnerHTML("&times;");
+                removeButton = DOM.createDiv();
+                removeButton.setInnerHTML("&nbsp;");
                 removeButton.setClassName(VClosableAccordion.CLASSNAME + "-caption-close");
                 getElement().appendChild(removeButton);
             } else if (!removable && removeButton != null) {
@@ -292,8 +288,8 @@ public class VClosableAccordion extends VTabsheetBase {
     }
 
     /**
-     * A StackItem has always two children, Child 0 is a VCaption, Child 1 is
-     * the actual child widget.
+     * A StackItem has always two children, Child 0 is a VCaption, Child 1 is the actual child
+     * widget.
      */
     public class StackItem extends ComplexPanel implements ClickHandler {
 
@@ -535,7 +531,6 @@ public class VClosableAccordion extends VTabsheetBase {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public Iterator<Widget> getWidgetIterator() {
         return widgets.iterator();
     }
