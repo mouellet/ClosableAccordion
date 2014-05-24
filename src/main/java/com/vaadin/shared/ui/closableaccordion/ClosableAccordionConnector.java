@@ -1,48 +1,51 @@
-package org.vaadin.addons.closableaccordion.client;
+package com.vaadin.shared.ui.closableaccordion;
 
-import org.vaadin.addons.closableaccordion.ClosableAccordion;
-import org.vaadin.addons.closableaccordion.client.VClosableAccordion.StackItem;
-
-import com.vaadin.client.ApplicationConnection;
 import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ConnectorHierarchyChangeEvent;
-import com.vaadin.client.UIDL;
 import com.vaadin.client.Util;
+import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.ui.SimpleManagedLayout;
+import com.vaadin.client.ui.VClosableAccordion;
+import com.vaadin.client.ui.VClosableAccordion.StackItem;
 import com.vaadin.client.ui.layout.MayScrollChildren;
 import com.vaadin.client.ui.tabsheet.TabsheetBaseConnector;
 import com.vaadin.shared.ui.Connect;
+import com.vaadin.shared.ui.accordion.AccordionState;
+import com.vaadin.ui.ClosableAccordion;
 
 @SuppressWarnings("serial")
 @Connect(ClosableAccordion.class)
-public class ClosableAccordionConnector extends TabsheetBaseConnector implements SimpleManagedLayout, MayScrollChildren {
+public class ClosableAccordionConnector extends TabsheetBaseConnector implements
+        SimpleManagedLayout, MayScrollChildren {
 
     @Override
-    public void updateFromUIDL(UIDL uidl, ApplicationConnection client) {
-        getWidget().selectedUIDLItemIndex = -1;
-        super.updateFromUIDL(uidl, client);
+    protected void init() {
+        super.init();
+        getWidget().setConnector(this);
+    }
+
+    @Override
+    public void onStateChanged(StateChangeEvent stateChangeEvent) {
+        super.onStateChanged(stateChangeEvent);
+
         /*
          * Render content after all tabs have been created and we know how large
          * the content area is
          */
-        if (getWidget().selectedUIDLItemIndex >= 0) {
-            StackItem selectedItem = getWidget().getStackItem(getWidget().selectedUIDLItemIndex);
-            UIDL selectedTabUIDL = getWidget().lazyUpdateMap.remove(selectedItem);
-            getWidget().open(getWidget().selectedUIDLItemIndex);
+        if (getWidget().selectedItemIndex >= 0) {
+            StackItem selectedItem = getWidget().getStackItem(
+                    getWidget().selectedItemIndex);
 
-            selectedItem.setContent(selectedTabUIDL);
-        } else if (isRealUpdate(uidl) && getWidget().getOpenStackItem() != null) {
+            getWidget().open(getWidget().selectedItemIndex);
+
+            ComponentConnector contentConnector = getChildComponents().get(0);
+            if (contentConnector != null) {
+                selectedItem.setContent(contentConnector.getWidget());
+            }
+        } else if (getWidget().getOpenStackItem() != null) {
             getWidget().close(getWidget().getOpenStackItem());
         }
-
-        // finally render possible hidden tabs
-        if (getWidget().lazyUpdateMap.size() > 0) {
-            for (Object element : getWidget().lazyUpdateMap.keySet()) {
-                StackItem item = (StackItem) element;
-                item.setContent(getWidget().lazyUpdateMap.get(item));
-            }
-            getWidget().lazyUpdateMap.clear();
-        }
+        getLayoutManager().setNeedsVerticalLayout(this);
     }
 
     @Override
@@ -91,7 +94,8 @@ public class ClosableAccordionConnector extends TabsheetBaseConnector implements
                     usedPixels += Util.getRequiredHeight(item.getElement());
                 }
             }
-            int rootElementInnerHeight = getLayoutManager().getInnerHeight(getWidget().getElement());
+            int rootElementInnerHeight = getLayoutManager().getInnerHeight(
+                    getWidget().getElement());
             int spaceForOpenItem = rootElementInnerHeight - usedPixels;
 
             if (spaceForOpenItem < 0) {
@@ -101,13 +105,25 @@ public class ClosableAccordionConnector extends TabsheetBaseConnector implements
             openTab.setHeight(spaceForOpenItem);
         } else {
             openTab.setHeightFromWidget();
-
         }
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.vaadin.client.ConnectorHierarchyChangeEvent.
+     * ConnectorHierarchyChangeHandler
+     * #onConnectorHierarchyChange(com.vaadin.client
+     * .ConnectorHierarchyChangeEvent)
+     */
     @Override
-    public void onConnectorHierarchyChange(ConnectorHierarchyChangeEvent connectorHierarchyChangeEvent) {
-        // TODO Move code from updateFromUIDL to this method
+    public void onConnectorHierarchyChange(
+            ConnectorHierarchyChangeEvent connectorHierarchyChangeEvent) {
+    }
+
+    @Override
+    public AccordionState getState() {
+        return (AccordionState) super.getState();
     }
 
 }

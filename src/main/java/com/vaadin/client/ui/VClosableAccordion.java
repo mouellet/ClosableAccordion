@@ -1,58 +1,55 @@
-package org.vaadin.addons.closableaccordion.client;
+package com.vaadin.client.ui;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.google.gwt.aria.client.Roles;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.ComplexPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.vaadin.client.ApplicationConnection;
 import com.vaadin.client.ComponentConnector;
-import com.vaadin.client.ConnectorMap;
-import com.vaadin.client.UIDL;
+import com.vaadin.client.TooltipInfo;
 import com.vaadin.client.Util;
 import com.vaadin.client.VCaption;
-import com.vaadin.client.ui.TouchScrollDelegate;
 import com.vaadin.client.ui.TouchScrollDelegate.TouchScrollHandler;
-import com.vaadin.client.ui.VTabsheetBase;
 import com.vaadin.client.ui.aria.AriaHelper;
-import com.vaadin.shared.ui.tabsheet.TabsheetBaseConstants;
-import com.vaadin.shared.ui.tabsheet.TabsheetConstants;
+import com.vaadin.shared.ComponentConstants;
+import com.vaadin.shared.ui.accordion.AccordionState;
+import com.vaadin.shared.ui.tabsheet.TabState;
+import com.vaadin.shared.ui.tabsheet.TabsheetServerRpc;
 
 public class VClosableAccordion extends VTabsheetBase {
 
-    public static final String CLASSNAME = "v-accordion";
+    public static final String CLASSNAME = AccordionState.PRIMARY_STYLE_NAME;
 
     private Set<Widget> widgets = new HashSet<Widget>();
 
-    /** For internal use only. May be removed or replaced in the future. */
-    public HashMap<StackItem, UIDL> lazyUpdateMap = new HashMap<StackItem, UIDL>();
-
-    private StackItem openTab = null;
+    private StackItem openTab;
 
     /** For internal use only. May be removed or replaced in the future. */
-    public int selectedUIDLItemIndex = -1;
+    public int selectedItemIndex = -1;
 
     private final TouchScrollHandler touchScrollHandler;
 
     public VClosableAccordion() {
         super(CLASSNAME);
+
         touchScrollHandler = TouchScrollDelegate.enableTouchScrolling(this);
     }
 
     @Override
-    public void renderTab(UIDL tabUidl, int index, boolean selected, boolean hidden) {
+    public void renderTab(TabState tabState, int index) {
         StackItem item;
         int itemIndex;
+
         if (getWidgetCount() <= index) {
             // Create stackItem and render caption
-            item = new StackItem(tabUidl);
+            item = new StackItem(this);
             if (getWidgetCount() == 0) {
                 item.addStyleDependentName("first");
             }
@@ -60,22 +57,17 @@ public class VClosableAccordion extends VTabsheetBase {
             add(item, getElement());
         } else {
             item = getStackItem(index);
-            item = moveStackItemIfNeeded(item, index, tabUidl);
             itemIndex = index;
         }
-        item.updateCaption(tabUidl);
 
-        item.updateTabStyleName(tabUidl.getStringAttribute(TabsheetConstants.TAB_STYLE_NAME));
+        item.updateCaption(tabState);
+        item.updateTabStyleName(tabState.styleName);
+        item.setVisible(tabState.visible);
+    }
 
-        item.setVisible(!hidden);
-
-        if (selected) {
-            selectedUIDLItemIndex = itemIndex;
-        }
-
-        if (tabUidl.getChildCount() > 0) {
-            lazyUpdateMap.put(item, tabUidl.getChildUIDL(0));
-        }
+    @Override
+    public void selectTab(int index) {
+        selectedItemIndex = index;
     }
 
     @Override
@@ -97,65 +89,6 @@ public class VClosableAccordion extends VTabsheetBase {
                 item.updateStyleNames(primaryStyleName);
             }
         }
-    }
-
-    /**
-     * This method tries to find out if a tab has been rendered with a different index previously.
-     * If this is the case it re-orders the children so the same StackItem is used for rendering
-     * this time. E.g. if the first tab has been removed all tabs which contain cached content must
-     * be moved 1 step up to preserve the cached content.
-     * 
-     * @param item
-     * @param newIndex
-     * @param tabUidl
-     * @return
-     */
-    private StackItem moveStackItemIfNeeded(StackItem item, int newIndex, UIDL tabUidl) {
-        UIDL tabContentUIDL = null;
-        ComponentConnector tabContent = null;
-        if (tabUidl.getChildCount() > 0) {
-            tabContentUIDL = tabUidl.getChildUIDL(0);
-            tabContent = client.getPaintable(tabContentUIDL);
-        }
-
-        Widget itemWidget = item.getComponent();
-        if (tabContent != null) {
-            if (tabContent.getWidget() != itemWidget) {
-                /*
-                 * This is not the same widget as before, find out if it has been moved
-                 */
-                int oldIndex = -1;
-                StackItem oldItem = null;
-                for (int i = 0; i < getWidgetCount(); i++) {
-                    Widget w = getWidget(i);
-                    oldItem = (StackItem) w;
-                    if (tabContent == oldItem.getComponent()) {
-                        oldIndex = i;
-                        break;
-                    }
-                }
-
-                if (oldIndex != -1 && oldIndex > newIndex) {
-                    /*
-                     * The tab has previously been rendered in another position so we must move the
-                     * cached content to correct position. We move only items with oldIndex >
-                     * newIndex to prevent moving items already rendered in this update. If for
-                     * instance tabs 1,2,3 are removed and added as 3,2,1 we cannot re-use "1" when
-                     * we get to the third tab.
-                     */
-                    insert(oldItem, getElement(), newIndex, true);
-                    return oldItem;
-                }
-            }
-        } else {
-            // Tab which has never been loaded. Must assure we use an empty
-            // StackItem
-            Widget oldWidget = item.getComponent();
-            if (oldWidget != null) {
-                oldWidget.removeFromParent();
-            }
-        }
-        return item;
     }
 
     /** For internal use only. May be removed or replaced in the future. */
@@ -191,133 +124,76 @@ public class VClosableAccordion extends VTabsheetBase {
 
     public void onSelectTab(StackItem item) {
         final int index = getWidgetIndex(item);
-        if (index != activeTabIndex && !disabled && !readonly && !disabledTabKeys.contains(tabKeys.get(index))) {
+        if (index != activeTabIndex && !disabled && !readonly
+                && !disabledTabKeys.contains(tabKeys.get(index))) {
             addStyleDependentName("loading");
-            client.updateVariable(id, "selected", "" + tabKeys.get(index), true);
+            connector.getRpcProxy(TabsheetServerRpc.class).setSelected(
+                    tabKeys.get(index).toString());
         }
     }
 
-    public void onRemoveTab(StackItem item) {
+    public void sendTabClosedEvent(StackItem item) {
         final int index = getWidgetIndex(item);
-        client.updateVariable(id, "close", tabKeys.get(index), true);
+        connector.getRpcProxy(TabsheetServerRpc.class).closeTab(
+                tabKeys.get(index));
     }
 
-    public class StackItemCaption extends VCaption {
+    @Override
+    protected void clearPaintables() {
+        clear();
+    }
 
-        private boolean removable = false;
-        private Element removeButton;
-        private StackItem stackItem;
-        private ApplicationConnection client;
+    @Override
+    public Iterator<Widget> getWidgetIterator() {
+        return widgets.iterator();
+    }
 
-        StackItemCaption(StackItem stackItem, ApplicationConnection client) {
-            super(client);
-            this.client = client;
-            this.stackItem = stackItem;
+    @Override
+    public int getTabCount() {
+        return getWidgetCount();
+    }
 
-            AriaHelper.ensureHasId(getElement());
-        }
+    @Override
+    public void removeTab(int index) {
+        StackItem item = getStackItem(index);
+        remove(item);
+        touchScrollHandler.removeElement(item.getContainerElement());
+    }
 
-        public boolean updateCaption(UIDL uidl) {
-
-            // TODO need to call this instead of super because the caption does
-            // not have an owner
-            boolean ret = updateCaptionWithoutOwner(uidl.getStringAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_CAPTION),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_DISABLED),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_DESCRIPTION),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_ERROR_MESSAGE),
-                    uidl.getStringAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_ICON));
-
-            setRemovable(uidl.hasAttribute("closable"));
-
-            return ret;
-        }
-
-        @Override
-        public void onBrowserEvent(Event event) {
-            if (removable && event.getTypeInt() == Event.ONCLICK && event.getEventTarget().cast() == removeButton) {
-                onRemoveTab(stackItem);
-                event.stopPropagation();
-                event.preventDefault();
+    @Override
+    public ComponentConnector getTab(int index) {
+        if (index < getWidgetCount()) {
+            StackItem stackItem = getStackItem(index);
+            if (stackItem == null) {
+                return null;
             }
-
-            super.onBrowserEvent(event);
-            /*
-             * if (event.getTypeInt() == Event.ONLOAD) {
-             * getTabsheet().tabSizeMightHaveChanged(getTab()); }
-             */
-        }
-
-        public StackItem getStackItem() {
-            return stackItem;
-        }
-
-        public void setRemovable(boolean removable) {
-            this.removable = removable;
-            if (removable && removeButton == null) {
-                removeButton = DOM.createDiv();
-                removeButton.setInnerHTML("&nbsp;");
-                removeButton.setClassName(VClosableAccordion.CLASSNAME + "-caption-close");
-                getElement().appendChild(removeButton);
-            } else if (!removable && removeButton != null) {
-                getElement().removeChild(removeButton);
-                removeButton = null;
-            }
-            if (removable) {
-                addStyleDependentName("closable");
-            } else {
-                removeStyleDependentName("closable");
+            Widget w = stackItem.getChildWidget();
+            if (w != null) {
+                return getConnectorForWidget(w);
             }
         }
 
-        public boolean isRemovable() {
-            return removable;
-        }
+        return null;
+    }
 
-        @Override
-        public int getRequiredWidth() {
-            int width = super.getRequiredWidth();
-            if (removeButton != null) {
-                width += Util.getRequiredWidth(removeButton);
-            }
-            return width;
-        }
+    /** For internal use only. May be removed or replaced in the future. */
+    public StackItem getStackItem(int index) {
+        return (StackItem) getWidget(index);
+    }
 
-        public Element getRemoveButton() {
-            return removeButton;
-        }
+    public Iterable<StackItem> getStackItems() {
+        return (Iterable) getChildren();
+    }
+
+    public StackItem getOpenStackItem() {
+        return openTab;
     }
 
     /**
-     * A StackItem has always two children, Child 0 is a VCaption, Child 1 is the actual child
-     * widget.
+     * A StackItem has always two children, Child 0 is a VCaption, Child 1 is
+     * the actual child widget.
      */
     public class StackItem extends ComplexPanel implements ClickHandler {
-
-        private StackItemCaption caption;
-        //private VRemoveHandler closeHandler;
-
-        private boolean open = false;
-
-        private Element content = DOM.createDiv();
-        private Element captionNode = DOM.createDiv();
-
-        private String styleName;
-
-        public StackItem(UIDL tabUidl) {
-            setElement(DOM.createDiv());
-            caption = new StackItemCaption(this, client);
-            caption.addClickHandler(this);
-            super.add(caption, captionNode);
-            DOM.appendChild(captionNode, caption.getElement());
-            DOM.appendChild(getElement(), captionNode);
-            DOM.appendChild(getElement(), content);
-
-            updateStyleNames(VClosableAccordion.this.getStylePrimaryName());
-
-            touchScrollHandler.addElement(getContainerElement());
-
-            close();
-        }
 
         public void setHeight(int height) {
             if (height == -1) {
@@ -363,7 +239,8 @@ public class VClosableAccordion extends VTabsheetBase {
             }
 
             int captionWidth = caption.getRequiredWidth();
-            int padding = Util.measureHorizontalPaddingAndBorder(caption.getElement(), 18);
+            int padding = Util.measureHorizontalPaddingAndBorder(
+                    caption.getElement(), 18);
             return captionWidth + padding;
         }
 
@@ -383,6 +260,31 @@ public class VClosableAccordion extends VTabsheetBase {
             return captionNode.getOffsetHeight();
         }
 
+        private StackItemCaption caption;
+        private boolean open = false;
+        private Element content = DOM.createDiv();
+        private Element captionNode = DOM.createDiv();
+        private String styleName;
+
+        private VClosableAccordion accordion;
+
+        public StackItem(VClosableAccordion accordion) {
+            this.accordion = accordion;
+            setElement(DOM.createDiv());
+            caption = new StackItemCaption(this);
+            caption.addClickHandler(this);
+            super.add(caption, captionNode);
+            DOM.appendChild(captionNode, caption.getElement());
+            DOM.appendChild(getElement(), captionNode);
+            DOM.appendChild(getElement(), content);
+
+            updateStyleNames(VClosableAccordion.this.getStylePrimaryName());
+
+            touchScrollHandler.addElement(getContainerElement());
+
+            close();
+        }
+
         private void updateStyleNames(String primaryStyleName) {
             content.removeClassName(getStylePrimaryName() + "-content");
             captionNode.removeClassName(getStylePrimaryName() + "-caption");
@@ -399,8 +301,8 @@ public class VClosableAccordion extends VTabsheetBase {
             onSelectTab(this);
         }
 
-        public Element getContainerElement() {
-            return content;
+        public com.google.gwt.user.client.Element getContainerElement() {
+            return DOM.asOld(content);
         }
 
         public Widget getChildWidget() {
@@ -414,6 +316,7 @@ public class VClosableAccordion extends VTabsheetBase {
         public void replaceWidget(Widget newWidget) {
             if (getWidgetCount() > 1) {
                 Widget oldWidget = getWidget(1);
+                remove(oldWidget);
                 widgets.remove(oldWidget);
             }
             add(newWidget, content);
@@ -446,9 +349,17 @@ public class VClosableAccordion extends VTabsheetBase {
             return open;
         }
 
-        public void setContent(UIDL contentUidl) {
-            final ComponentConnector newPntbl = client.getPaintable(contentUidl);
-            Widget newWidget = newPntbl.getWidget();
+        /**
+         * Updates the content of the open tab of the accordion.
+         * 
+         * This method is mostly for internal use and may change in future
+         * versions.
+         * 
+         * @since 7.2
+         * @param newWidget
+         *            new content
+         */
+        public void setContent(Widget newWidget) {
             if (getChildWidget() == null) {
                 add(newWidget, content);
                 widgets.add(newWidget);
@@ -465,14 +376,20 @@ public class VClosableAccordion extends VTabsheetBase {
             onSelectTab(this);
         }
 
-        public void updateCaption(UIDL uidl) {
-            caption.updateCaption(uidl);
+        public void updateCaption(TabState tabState) {
+            caption.update(tabState);
             // TODO need to call this because the caption does not have an owner
-            caption.updateCaptionWithoutOwner(uidl.getStringAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_CAPTION),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_DISABLED),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_DESCRIPTION),
-                    uidl.hasAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_ERROR_MESSAGE),
-                    uidl.getStringAttribute(TabsheetBaseConstants.ATTRIBUTE_TAB_ICON));
+            caption.updateCaptionWithoutOwner(
+                    tabState.caption,
+                    !tabState.enabled,
+                    hasAttribute(tabState.description),
+                    hasAttribute(tabState.componentError),
+                    connector.getResourceUrl(ComponentConstants.ICON_RESOURCE
+                            + tabState.key));
+        }
+
+        private boolean hasAttribute(String string) {
+            return string != null && !string.trim().isEmpty();
         }
 
         /**
@@ -513,67 +430,119 @@ public class VClosableAccordion extends VTabsheetBase {
             return caption.isVisible();
         }
 
+        public VClosableAccordion getAccordion() {
+            return accordion;
+        }
+
     }
 
-    @Override
-    protected void clearPaintables() {
-        clear();
-    }
+    public static class StackItemCaption extends VCaption {
 
-    boolean isDynamicWidth() {
-        ComponentConnector paintable = ConnectorMap.get(client).getConnector(this);
-        return paintable.isUndefinedWidth();
-    }
+        private boolean closable = false;
+        private Element closeButton;
+        private StackItem stackItem;
 
-    boolean isDynamicHeight() {
-        ComponentConnector paintable = ConnectorMap.get(client).getConnector(this);
-        return paintable.isUndefinedHeight();
-    }
+        StackItemCaption(StackItem stackItem) {
+            super(stackItem.getAccordion().connector.getConnection());
+            this.stackItem = stackItem;
 
-    @Override
-    public Iterator<Widget> getWidgetIterator() {
-        return widgets.iterator();
-    }
+            AriaHelper.ensureHasId(getElement());
+        }
 
-    @Override
-    public int getTabCount() {
-        return getWidgetCount();
-    }
-
-    @Override
-    public void removeTab(int index) {
-        StackItem item = getStackItem(index);
-        remove(item);
-        touchScrollHandler.removeElement(item.getContainerElement());
-    }
-
-    @Override
-    public ComponentConnector getTab(int index) {
-        if (index < getWidgetCount()) {
-            StackItem stackItem = getStackItem(index);
-            if (stackItem == null) {
-                return null;
+        private boolean update(TabState tabState) {
+            if (tabState.description != null || tabState.componentError != null) {
+                setTooltipInfo(new TooltipInfo(tabState.description,
+                        tabState.componentError));
+            } else {
+                setTooltipInfo(null);
             }
-            Widget w = stackItem.getChildWidget();
-            if (w != null) {
-                return ConnectorMap.get(client).getConnector(w);
+
+            // TODO need to call this instead of super because the caption does
+            // not have an owner
+            String captionString = tabState.caption.isEmpty() ? null
+                    : tabState.caption;
+            boolean ret = updateCaptionWithoutOwner(captionString,
+                    !tabState.enabled, hasAttribute(tabState.description),
+                    hasAttribute(tabState.componentError),
+                    stackItem.getAccordion().connector
+                            .getResourceUrl(ComponentConstants.ICON_RESOURCE
+                                    + tabState.key), tabState.iconAltText);
+
+            setClosable(tabState.closable);
+
+            return ret;
+        }
+
+        private boolean hasAttribute(String string) {
+            return string != null && !string.trim().isEmpty();
+        }
+
+        private VClosableAccordion getAccordion() {
+            return stackItem.getAccordion();
+        }
+
+        @Override
+        public void onBrowserEvent(Event event) {
+            if (closable && event.getTypeInt() == Event.ONCLICK
+                    && event.getEventTarget().cast() == closeButton) {
+                getAccordion().sendTabClosedEvent(stackItem);
+                event.stopPropagation();
+                event.preventDefault();
+            }
+
+            super.onBrowserEvent(event);
+
+            // TODO
+            /*
+             * if (event.getTypeInt() == Event.ONLOAD) {
+             * getAccordion().tabSizeMightHaveChanged(getStackItem()); }
+             */
+        }
+
+        public StackItem getStackItem() {
+            return stackItem;
+        }
+
+        public void setClosable(boolean closable) {
+            this.closable = closable;
+            if (closable && closeButton == null) {
+                closeButton = DOM.createDiv();
+                closeButton.setInnerHTML("&nbsp;");
+                closeButton.setClassName(VClosableAccordion.CLASSNAME
+                        + "-caption-close");
+
+                Roles.getTabRole().setAriaHiddenState(closeButton, true);
+                Roles.getTabRole().setAriaDisabledState(closeButton, true);
+
+                getElement().appendChild(closeButton);
+            } else if (!closable && closeButton != null) {
+                getElement().removeChild(closeButton);
+                closeButton = null;
+            }
+            if (closable) {
+                addStyleDependentName("closable");
+            } else {
+                removeStyleDependentName("closable");
             }
         }
 
-        return null;
-    }
+        public boolean isClosable() {
+            return closable;
+        }
 
-    /** For internal use only. May be removed or replaced in the future. */
-    public StackItem getStackItem(int index) {
-        return (StackItem) getWidget(index);
-    }
+        @Override
+        public int getRequiredWidth() {
+            int width = super.getRequiredWidth();
+            if (closeButton != null) {
+                width += Util.getRequiredWidth(closeButton);
+            }
+            return width;
+        }
 
-    public Iterable<StackItem> getStackItems() {
-        return (Iterable) getChildren();
-    }
+        public com.google.gwt.user.client.Element getCloseButton() {
+            return DOM.asOld(closeButton);
+        }
 
-    public StackItem getOpenStackItem() {
-        return openTab;
     }
 
 }
