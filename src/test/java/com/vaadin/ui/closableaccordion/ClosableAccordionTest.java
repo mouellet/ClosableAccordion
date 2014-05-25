@@ -1,14 +1,13 @@
-package org.vaadin.addons.closableaccordion;
+package com.vaadin.ui.closableaccordion;
 
-import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-// JUnit tests here
 public class ClosableAccordionTest {
 
     @Test
     public void thisAlwaysPasses() {
-        Assert.assertEquals(true, true);
+        assertEquals(true, true);
     }
 }
