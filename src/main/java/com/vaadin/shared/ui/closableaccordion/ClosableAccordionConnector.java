@@ -1,5 +1,7 @@
 package com.vaadin.shared.ui.closableaccordion;
 
+import org.vaadin.addons.closableaccordion.ClosableAccordion;
+
 import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ConnectorHierarchyChangeEvent;
 import com.vaadin.client.Util;
@@ -11,7 +13,6 @@ import com.vaadin.client.ui.layout.MayScrollChildren;
 import com.vaadin.client.ui.tabsheet.TabsheetBaseConnector;
 import com.vaadin.shared.ui.Connect;
 import com.vaadin.shared.ui.accordion.AccordionState;
-import com.vaadin.ui.ClosableAccordion;
 
 @SuppressWarnings("serial")
 @Connect(ClosableAccordion.class)

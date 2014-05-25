@@ -5,7 +5,7 @@
     <groupId>org.vaadin.addons</groupId>
     <artifactId>closableaccordion</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <name>ClosableAccordion Add-on</name>
 
     <properties>
@@ -124,7 +124,7 @@
 							<!-- Package format version - do not change -->
                             <Vaadin-Package-Version>1</Vaadin-Package-Version>
                             <Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-                            <Vaadin-Widgetsets>com.vaadin.ui.ClosableAccordionWidgetSet</Vaadin-Widgetsets>
+                            <Vaadin-Widgetsets>org.vaadin.addons.closableaccordion.ClosableAccordionWidgetSet</Vaadin-Widgetsets>
                         </manifestEntries>
                     </archive>
                 </configuration>

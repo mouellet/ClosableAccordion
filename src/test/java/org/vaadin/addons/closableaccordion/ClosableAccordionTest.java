@@ -1,4 +1,4 @@
-package com.vaadin.ui.closableaccordion;
+package org.vaadin.addons.closableaccordion;
 
 import static org.junit.Assert.assertEquals;
 

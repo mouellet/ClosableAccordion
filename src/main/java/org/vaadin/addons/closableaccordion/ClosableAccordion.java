@@ -1,4 +1,4 @@
-package com.vaadin.ui;
+package org.vaadin.addons.closableaccordion;
 
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
