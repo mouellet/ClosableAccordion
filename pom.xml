@@ -5,12 +5,12 @@
     <groupId>org.vaadin.addons</groupId>
     <artifactId>closableaccordion</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.2</version>
+    <version>1.1.4</version>
     <name>ClosableAccordion Add-on</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>7.2.3</vaadin.version>
+        <vaadin.version>7.5.4</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 
 		<!-- ZIP Manifest fields -->
