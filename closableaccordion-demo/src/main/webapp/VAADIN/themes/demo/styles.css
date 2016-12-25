@@ -1,0 +1,6526 @@
+.v-assistive-device-only {
+	position: absolute;
+	top: -2000px;
+	left: -2000px;
+	width: 10px;
+	overflow: hidden;
+}
+
+.v-radiobutton {
+	-webkit-user-select: none;
+}
+
+@-webkit-keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
+@-moz-keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
+@keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
+.v-vaadin-version:after {
+	content: "7.5.4";
+}
+
+.v-generated-body {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.v-modal-window-open {
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: FontAwesome;
+	src: url(../base/fonts/fontawesome-webfont.eot);
+	src: url(../base/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(../base/fonts/fontawesome-webfont.woff) format("woff"), url(../base/fonts/fontawesome-webfont.ttf) format("truetype"), url(../base/fonts/fontawesome-webfont.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.FontAwesome {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+}
+
+@font-face {
+	font-family: "closable_accordion";
+	src: url('icons/closable_accordion.eot?70239236');
+	src: url('icons/closable_accordion.eot?70239236#iefix') format("embedded-opentype"), url('icons/closable_accordion.woff?70239236') format("woff"), url('icons/closable_accordion.ttf?70239236') format("truetype"), url('icons/closable_accordion.svg?70239236#closable_accordion') format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+    font-family: 'closable_accordion';
+    src: url('icons/closable_accordion.svg?70239236#closable_accordion') format('svg');
+  }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "closable_accordion";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: 0.2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: 0.2em;
+}
+
+.icon-trash:before {
+	content: "\e802";
+}
+
+.demo .v-widget {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: bottom;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.demo .v-absolutelayout-wrapper {
+	position: absolute;
+	overflow: hidden;
+}
+
+.demo .v-absolutelayout-margin, .demo .v-absolutelayout-canvas {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-absolutelayout.v-has-height > div, .demo .v-absolutelayout.v-has-height > div > div {
+	height: 100%;
+}
+
+.demo .v-absolutelayout.v-has-width > div, .demo .v-absolutelayout.v-has-width > div > div {
+	width: 100%;
+}
+
+.demo .v-accordion {
+	position: relative;
+	outline: none;
+	overflow: visible;
+	text-align: left;
+	font-size: 0;
+}
+
+.demo .v-accordion-item {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.demo .v-accordion-item-caption {
+	overflow: visible;
+	white-space: nowrap;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+}
+
+.demo .v-accordion-item-caption .v-caption {
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.demo .v-accordion-item-open .v-accordion-item-caption .v-caption {
+	cursor: default;
+}
+
+.demo .v-accordion-item-content {
+	position: absolute;
+	width: 100%;
+}
+
+.demo .v-browserframe {
+	font-size: 0;
+}
+
+.v-webkit.v-ios .demo .v-browserframe {
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+}
+
+.demo .v-browserframe > span {
+	font-size: 13px;
+}
+
+.demo .v-button {
+	display: inline-block;
+	zoom: 1;
+	text-align: center !important;
+	text-decoration: none;
+	border: 2px outset #ddd;
+	background: #eee;
+	cursor: pointer;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0.2em 1em;
+	color: inherit;
+	font: inherit;
+	font-size: 13px;
+	line-height: normal;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-button.v-disabled {
+	cursor: default;
+}
+
+.demo .v-button-wrap, .demo .v-button-caption {
+	vertical-align: baseline;
+	white-space: nowrap;
+	font: inherit;
+	color: inherit;
+	line-height: normal;
+}
+
+.demo .v-button .v-icon {
+	vertical-align: middle;
+	margin-right: 3px;
+	border: none;
+}
+
+.demo .v-button .v-errorindicator {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	float: none;
+}
+
+.demo .v-button-link {
+	border: none;
+	text-align: left !important;
+	background: transparent;
+	padding: 0;
+	color: inherit;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ie-user-select: text;
+	user-select: text;
+}
+
+.v-sa .demo .v-button-link:focus {
+	outline-offset: -3px;
+}
+
+.demo .v-button-link .v-button-caption {
+	text-decoration: underline;
+	color: inherit;
+	text-align: left;
+}
+
+.demo .v-nativebutton .v-icon {
+	vertical-align: middle;
+	margin-right: 3px;
+	border: none;
+}
+
+.demo .v-nativebutton .v-errorindicator {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	float: none;
+}
+
+.demo .v-nativebutton-link {
+	border: none;
+	text-align: left !important;
+	background: transparent;
+	padding: 0;
+	color: inherit;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ie-user-select: text;
+	user-select: text;
+}
+
+.demo .v-nativebutton-link .v-nativebutton-caption {
+	text-decoration: underline;
+	color: inherit;
+	text-align: left;
+}
+
+.demo .v-nativebutton {
+	text-align: center !important;
+	cursor: pointer;
+	white-space: nowrap;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+}
+
+.demo .v-nativebutton .v-nativebutton-caption {
+	vertical-align: middle;
+	white-space: nowrap;
+	font: inherit;
+	color: inherit;
+}
+
+.demo .v-nativebutton .v-icon {
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+.demo .v-nativebutton .v-errorindicator {
+	display: inline-block;
+	zoom: 1;
+	float: none;
+}
+
+.v-ie .demo .v-nativebutton {
+	overflow: visible;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.v-ie .demo .v-nativebutton-link {
+	padding: 0;
+}
+
+.demo .v-checkbox {
+	display: block;
+}
+
+.demo .v-checkbox, .demo .v-checkbox label, .demo .v-checkbox input, .demo .v-checkbox .v-icon {
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.demo .v-checkbox .v-icon {
+	margin: 0 2px;
+}
+
+.demo .v-checkbox .v-errorindicator {
+	float: none;
+	display: inline;
+	display: inline-block;
+	zoom: 1;
+}
+
+.demo .v-captionwrapper {
+	text-align: left;
+}
+
+.demo .v-caption {
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.demo .v-errorindicator {
+	display: inline-block;
+}
+
+.demo .v-caption .v-icon {
+	display: inline-block;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.demo .v-caption .v-captiontext {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.demo .v-caption .v-required-field-indicator {
+	display: inline-block;
+}
+
+.demo .v-colorpicker {
+	text-align: center;
+}
+
+.demo .v-colorpicker-button-color {
+	border: 1px solid silver;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+.demo .v-colorpicker-area {
+	border: 1px solid silver;
+	margin: 1px auto;
+}
+
+.demo .v-colorpicker.v-default-caption-width {
+	width: 100px;
+}
+
+.demo .v-colorpicker-history {
+	margin: 5px;
+}
+
+.demo .v-colorpicker-history td {
+	border: 1px solid silver !important;
+}
+
+.demo .v-colorpicker-history td {
+	line-height: 15px;
+}
+
+.demo .v-colorpicker-popup {
+	width: 244px;
+}
+
+.demo .v-colorpicker-popup .v-scrollable {
+	background-color: #dddddd;
+}
+
+.demo .v-colorpicker-popup .v-tabsheet-content .v-scrollable {
+	background-color: #eaeaea;
+}
+
+.demo .v-colorpicker-popup .v-tabsheet-content .v-tabsheet-tabsheetpanel {
+	background: transparent;
+}
+
+.demo .v-colorpicker-popup .resize-button {
+	border: 0px solid silver;
+	background: url(../base/colorpicker/images/resizebg.png);
+	margin-top: 5px;
+}
+
+.demo .v-colorpicker-popup .resize-button-caption {
+	display: none;
+}
+
+.demo .v-colorpicker-popup .resize-button:hover {
+	background: url(../base/colorpicker/images/resizebg-selected.png);
+}
+
+.demo .v-colorpicker-popup .resize-button:focus {
+	outline: none;
+}
+
+.demo .v-colorpicker-gradient {
+	width: 220px;
+	height: 220px;
+	padding-left: 10px;
+	margin-top: 0px;
+}
+
+.demo .v-colorpicker-gradient .v-colorpicker-gradient-clicklayer {
+	background-color: white;
+	filter: alpha(opacity = 0);
+	opacity: 0;
+}
+
+.demo .v-colorpicker-popup .rgb-gradient .v-colorpicker-gradient-background {
+	width: 220px;
+	height: 220px;
+	background: url(../base/colorpicker/images/gradient2.png);
+}
+
+.demo .v-colorpicker-popup .hsv-gradient .v-colorpicker-gradient-foreground {
+	background: url(../base/colorpicker/images/gradient.png);
+}
+
+.demo .v-colorpicker-popup .v-colorpicker-gradient-lowerbox {
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+}
+
+.demo .v-colorpicker-popup .v-colorpicker-gradient-higherbox {
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.demo .v-colorpicker-popup .rgb-sliders {
+	width: 227px;
+	padding-left: 10px;
+	color: #444444;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.demo .v-colorpicker-popup .rgb-sliders .red .v-slider-base {
+	background-color: red;
+}
+
+.demo .v-colorpicker-popup .rgb-sliders .green .v-slider-base {
+	background-color: green;
+}
+
+.demo .v-colorpicker-popup .rgb-sliders .blue .v-slider-base {
+	background-color: blue;
+}
+
+.demo .v-colorpicker-popup .hsv-sliders {
+	padding-left: 10px;
+	color: #444444;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.demo .v-colorpicker-popup .hue-slider {
+	height: 10px;
+	border: 0px solid silver;
+	background-image: url(../base/colorpicker/images/slider_hue_bg.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 3px;
+	margin-top: 0px;
+}
+
+.demo .v-colorpicker-popup .hue-slider .v-slider-handle {
+	margin-top: -2px;
+}
+
+.demo .v-colorpicker-popup .hue-slider .v-slider-base {
+	border: 0px none;
+	height: 0px;
+	background-color: transparent;
+}
+
+.demo .v-colorpicker-popup .v-colorpicker-preview {
+	margin-top: 5px;
+	padding-left: 11px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+}
+
+.demo .v-colorpicker-popup .v-absolutelayout-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.demo .v-colorpicker-popup .v-colorpicker-preview-textfield {
+	background: none;
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.demo .v-colorpicker-popup .v-textfield-dark {
+	color: #FFFFFF;
+}
+
+.demo .v-colorpicker-popup .v-textfield-light {
+	color: #000000;
+}
+
+.demo .v-colorpicker-popup .colorselect {
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.demo .v-colorpicker-popup .v-tabsheet .v-colorpicker-grid {
+	height: 319px;
+}
+
+.demo .v-colorpicker-popup .colorselect td {
+	line-height: 15px;
+}
+
+.demo .v-colorpicker-popup .v-filterselect {
+	padding-right: 16px;
+}
+
+.demo .v-calendar-nresize DIV DIV {
+	cursor: n-resize !important;
+}
+
+.demo .v-calendar-sresize DIV DIV {
+	cursor: s-resize !important;
+}
+
+.demo .v-calendar {
+	background-color: #fff;
+}
+
+.demo .v-calendar-header-month, .demo .v-calendar-header-week {
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.demo .v-calendar-header-day {
+	text-align: center;
+	color: #666;
+	font-size: 12px;
+	line-height: normal;
+}
+
+.demo .v-calendar-header-week .v-calendar-header-day:hover {
+	cursor: pointer;
+	color: #222;
+}
+
+.demo .v-calendar-header-day-today {
+	font-weight: bold;
+	color: #444;
+}
+
+.demo .v-calendar-header-month td:first-child {
+	padding-left: 19px;
+}
+
+.demo .v-calendar-header-week .v-calendar-back, .demo .v-calendar-header-week .v-calendar-next {
+	border: none;
+	padding: 0;
+	margin: 0;
+	height: 12px;
+	width: 12px;
+	overflow: hidden;
+	background: transparent url(../base/calendar/img/arrows.png) no-repeat 50% 0;
+	opacity: 0.3;
+	filter: alpha(opacity = 30);
+	cursor: default;
+}
+
+.demo .v-calendar-header-week .v-calendar-back:hover, .demo .v-calendar-header-week .v-calendar-next:hover {
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+.demo .v-calendar-header-week .v-calendar-back:active, .demo .v-calendar-header-week .v-calendar-next:active {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+
+.demo .v-calendar-header-week .v-calendar-next {
+	background-position: 50% -12px;
+}
+
+.demo .v-calendar-month {
+	outline: none;
+}
+
+.demo .v-calendar-week-numbers {
+	width: 20px;
+	border-right: 1px solid #ccc;
+}
+
+.demo .v-calendar-week-number {
+	border: none;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	opacity: 0.5;
+	width: 20px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+.demo .v-calendar-week-number:hover {
+	opacity: 1;
+}
+
+.demo .v-calendar-month-day {
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	outline: none;
+}
+
+.demo .v-calendar-month-day-today {
+	background-color: #e7f0f5;
+}
+
+.demo .v-calendar-month-day-selected {
+	background-color: #fffee7;
+}
+
+.demo .v-calendar-month-day-dragemphasis {
+	background-color: #a8a8a8;
+}
+
+.demo .v-calendar-month-day-scrollable {
+	overflow-y: scroll;
+}
+
+.demo .v-calendar-day-number {
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 3px;
+	white-space: nowrap;
+}
+
+.demo .v-calendar-day-number:hover {
+	cursor: pointer;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+.demo .v-calendar-month .v-calendar-spacer, .demo .v-calendar-month .v-calendar-bottom-spacer, .demo .v-calendar-month .v-calendar-bottom-spacer-empty {
+	height: 15px;
+	font-size: 11px;
+}
+
+.demo .v-calendar-month .v-calendar-bottom-spacer:hover {
+	cursor: pointer;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+.demo .v-calendar-event {
+	line-height: 14px;
+	font-size: 11px;
+	padding: 0 0 0 4px;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	outline: none;
+}
+
+.demo .v-calendar-event-month {
+	margin-bottom: 1px;
+	white-space: nowrap;
+}
+
+.demo .v-calendar-event-month:hover {
+	text-decoration: underline;
+}
+
+.demo .v-calendar-event-all-day {
+	background: #999;
+	display: block;
+	margin-left: -2px;
+}
+
+.demo div.v-calendar-event-all-day {
+	color: #fff;
+	height: 14px;
+}
+
+.demo .v-calendar-event-continued-from {
+	margin-left: 0;
+}
+
+.demo .v-calendar-event-start {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	margin-left: 0;
+}
+
+.demo .v-calendar-event-end {
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.demo .v-calendar-week-wrapper {
+	position: relative;
+}
+
+.demo .v-calendar-times {
+	width: 51px;
+}
+
+.demo .v-calendar-time {
+	padding: 0 8px 7px 0;
+	margin-top: -7px;
+	text-align: right;
+	font-size: 11px;
+	color: #666;
+	border-right: 1px solid #ccc;
+}
+
+.demo .v-calendar-weekly-longevents {
+	border-left: 1px solid #ccc;
+	border-bottom: 2px solid #bbb;
+	margin-left: 50px;
+}
+
+.demo .v-calendar-weekly-longevents .v-calendar-datecell {
+	border-right: 1px solid #ccc;
+	padding: 1px 0 0;
+}
+
+.demo .v-calendar-weekly-longevents .v-calendar-event {
+	height: 14px;
+	margin-bottom: 1px;
+}
+
+.demo .v-calendar-weekly-longevents .v-calendar-event:hover {
+	text-decoration: underline;
+}
+
+.demo .v-calendar-day-times {
+	border-right: 1px solid #ccc;
+	outline: none;
+}
+
+.demo .v-calendar-day-times .v-datecellslot, .demo .v-calendar-day-times .v-datecellslot-even {
+	border-bottom: 1px solid #ccc;
+}
+
+.demo .v-calendar-day-times .v-datecellslot-even {
+	border-bottom-color: #eee;
+}
+
+.demo .v-calendar-day-times .v-daterange {
+	background-color: #a8a8a8;
+}
+
+.demo .v-calendar-day-times .v-reserved {
+	background-color: #FF3333;
+}
+
+.demo .v-calendar-day-times .dragemphasis {
+	background-color: #a8a8a8;
+}
+
+.demo .v-calendar-week-wrapper .v-calendar-event {
+	padding: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: -1px;
+}
+
+.demo .v-calendar-event-caption {
+	position: absolute;
+	z-index: 1;
+	top: 2px;
+	left: 4px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: normal;
+}
+
+.demo .v-calendar-event-content {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #777;
+	background: #eee;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	height: 14px;
+}
+
+.demo .v-calendar-current-time {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+	background: #5a6c86;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	z-index: 2;
+}
+
+.demo .v-calendar-event-resizetop {
+	position: absolute;
+	cursor: n-resize;
+	height: 5%;
+	min-height: 3px;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.demo .v-calendar-event-resizebottom {
+	position: absolute;
+	cursor: s-resize;
+	height: 5%;
+	min-height: 3px;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.demo .v-calendar-month-sizedheight .v-calendar-month-day {
+	height: 100px;
+}
+
+.demo .v-calendar-month-sizedwidth .v-calendar-month-day {
+	width: 100px;
+}
+
+.demo .v-calendar-header-month-Hsized .v-calendar-header-day {
+	width: 101px;
+}
+
+.demo .v-calendar-header-month-Hsized td:first-child {
+	padding-left: 21px;
+}
+
+.demo .v-calendar-header-day-Hsized {
+	width: 200px;
+}
+
+.demo .v-calendar-week-numbers-Vsized .v-calendar-week-number {
+	height: 100px;
+	line-height: 100px;
+}
+
+.demo .v-calendar-week-wrapper-Vsized {
+	height: 400px;
+	overflow-x: hidden !important;
+}
+
+.demo .v-calendar-times-Vsized .v-calendar-time {
+	height: 38px;
+}
+
+.demo .v-calendar-times-Hsized .v-calendar-time {
+	width: 42px;
+}
+
+.demo .v-calendar-day-times-Vsized .v-datecellslot, .demo .v-calendar-day-times-Vsized .v-datecellslot-even {
+	height: 18px;
+}
+
+.demo .v-calendar-day-times-Hsized, .demo .v-calendar-day-times-Hsized .v-datecellslot, .demo .v-calendar-day-times-Hsized .v-datecellslot-even {
+	width: 200px;
+}
+
+.demo.v-app {
+	height: 100%;
+}
+
+.demo.v-app, .demo .v-window, .demo .v-popupview-popup, .demo .v-label, .demo .v-caption {
+	cursor: default;
+}
+
+.demo .v-window {
+	box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
+}
+
+.demo .v-datefield-popup, .demo .v-filterselect-suggestpopup, .demo .v-menubar-popup, .demo .v-slider-feedback, .demo .v-popupview-popup, .demo .v-contextmenu {
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+body .demo.v-app .v-app-loading {
+	background-image: url(../base/common/img/loading-indicator.gif);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+.demo .v-ui {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	position: relative;
+}
+
+.demo .v-ui.v-ui-embedded {
+	margin-top: -1px;
+	border-top: 1px solid transparent;
+}
+
+.demo .v-ui:active, .demo .v-ui:focus {
+	outline: none;
+}
+
+.demo.v-app select, .demo .v-window select {
+	margin: 0;
+}
+
+.demo .v-disabled {
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	cursor: default;
+}
+
+.demo .v-disabled * {
+	cursor: default;
+}
+
+* html .demo .v-disabled {
+	zoom: 1;
+}
+
+* + html .demo .v-disabled {
+	zoom: 1;
+}
+
+.demo .v-disabled .v-disabled {
+	opacity: 1;
+}
+
+.demo .v-required-field-indicator {
+	padding-left: 2px;
+	color: red;
+}
+
+.demo .v-form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.demo .v-form-content {
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-tooltip {
+	cursor: default;
+	background: #fff;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.demo .v-tooltip-text {
+	overflow: auto;
+}
+
+.demo .v-tooltip .v-errormessage {
+	overflow: auto;
+}
+
+.demo .v-contextmenu {
+	background: #fff;
+}
+
+.demo .v-contextmenu .gwt-MenuItem {
+	cursor: pointer;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+.demo .v-contextmenu .gwt-MenuBar {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.demo .v-contextmenu .gwt-MenuItem div {
+	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.demo .v-contextmenu .gwt-MenuItem-selected div {
+	background: #aaa;
+	color: #fff;
+}
+
+.demo .v-contextmenu table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+.demo .v-contextmenu .gwt-MenuItem img {
+	margin-right: 1em;
+	vertical-align: middle;
+}
+
+.demo .v-label pre {
+	margin: 0;
+}
+
+.demo .v-label-undef-w {
+	white-space: nowrap;
+}
+
+.demo .v-label h1, .demo .v-label h2, .demo .v-label h3, .demo .v-label h4, .demo .v-label h5, .demo .v-label h6 {
+	line-height: normal;
+}
+
+.demo .v-loading-indicator, .demo .v-loading-indicator-delay, .demo .v-loading-indicator-wait {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 30000;
+	width: 31px;
+	height: 31px;
+	background: transparent url(../base/common/img/loading-indicator.gif);
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.demo .v-loading-indicator-delay {
+	background-image: url(../base/common/img/loading-indicator-delay.gif);
+}
+
+.demo .v-loading-indicator-wait {
+	background-image: url(../base/common/img/loading-indicator-wait.gif);
+}
+
+.demo.v-app input[type="text"], .demo.v-app input[type="password"], .demo.v-app input[type="reset"], .demo.v-app select, .demo.v-app textarea, .demo .v-window input[type="text"], .demo .v-window input[type="password"], .demo .v-window input[type="reset"], .demo .v-window select, .demo .v-window textarea {
+	padding: 2px;
+}
+
+.demo input::-ms-clear {
+	display: none;
+}
+
+.demo .v-drag-element {
+	z-index: 60000;
+	position: absolute !important;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: default;
+}
+
+.demo .v-clip {
+	overflow: hidden;
+}
+
+.demo .v-scrollable {
+	overflow: auto;
+	font-size: 0;
+	line-height: normal;
+}
+
+.v-ff .demo .v-scrollable {
+	font-size: 13px;
+}
+
+.v-ios.v-webkit .demo .v-scrollable {
+	-webkit-overflow-scrolling: touch;
+}
+
+.v-ios5.v-webkit .demo .v-scrollable {
+	-webkit-overflow-scrolling: none;
+}
+
+.demo .v-scrollable.v-panel-content > .v-widget {
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.demo.v-overlay-container {
+	width: 0;
+	height: 0;
+}
+
+.demo .v-vertical.v-margin-top, .demo .v-horizontal.v-margin-top {
+	padding-top: 12px;
+}
+
+.demo .v-vertical.v-margin-right, .demo .v-horizontal.v-margin-right {
+	padding-right: 12px;
+}
+
+.demo .v-vertical.v-margin-bottom, .demo .v-horizontal.v-margin-bottom {
+	padding-bottom: 12px;
+}
+
+.demo .v-vertical.v-margin-left, .demo .v-horizontal.v-margin-left {
+	padding-left: 12px;
+}
+
+.demo .v-gridlayout.v-layout-margin-top {
+	padding-top: 24px;
+}
+
+.demo .v-gridlayout, .demo .v-verticallayout, .demo .v-horizontallayout {
+	font-size: 0;
+	line-height: normal;
+}
+
+.demo .v-gridlayout.v-layout-margin-bottom {
+	padding-bottom: 24px;
+}
+
+.demo .v-gridlayout.v-layout-margin-left {
+	padding-left: 24px;
+}
+
+.demo .v-gridlayout.v-layout-margin-right {
+	padding-right: 24px;
+}
+
+.demo .v-gridlayout .v-layout-spacing-on {
+	padding-left: 12px;
+	padding-top: 12px;
+}
+
+.demo .v-spacing {
+	width: 6px;
+	height: 6px;
+}
+
+.demo .v-vertical, .demo .v-horizontal {
+	display: inline-block;
+}
+
+.demo div.v-layout.v-horizontal.v-widget {
+	white-space: nowrap;
+}
+
+.demo .v-layout.v-vertical > .v-expand, .demo .v-layout.v-horizontal > .v-expand {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+.demo .v-slot, .demo .v-spacing {
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+}
+
+.demo .v-vertical > .v-slot:after {
+	display: inline-block;
+	clear: both;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.demo .v-vertical > .v-slot, .demo .v-vertical > .v-expand > .v-slot {
+	display: block;
+	clear: both;
+}
+
+.demo .v-horizontal > .v-slot, .demo .v-horizontal > .v-expand > .v-slot {
+	height: 100%;
+}
+
+.demo .v-horizontal > .v-expand > .v-slot {
+	position: relative;
+}
+
+.demo .v-vertical > .v-spacing, .demo .v-vertical > .v-expand > .v-spacing {
+	width: 0;
+	display: block;
+	clear: both;
+}
+
+.demo .v-horizontal > .v-spacing, .demo .v-horizontal > .v-expand > .v-spacing {
+	height: 0;
+}
+
+.demo .v-align-middle:before, .demo .v-align-bottom:before, .demo .v-expand > .v-align-middle:before, .demo .v-expand > .v-align-bottom:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	width: 0;
+}
+
+.demo .v-align-middle, .demo .v-align-bottom {
+	white-space: nowrap;
+}
+
+.demo .v-align-middle > .v-widget, .demo .v-align-right > .v-widget, .demo .v-align-center > .v-widget, .demo .v-align-bottom > .v-widget {
+	display: inline-block;
+}
+
+.demo .v-align-middle, .demo .v-align-middle > .v-widget {
+	vertical-align: middle;
+}
+
+.demo .v-align-bottom, .demo .v-align-bottom > .v-widget {
+	vertical-align: bottom;
+}
+
+.demo .v-align-center {
+	text-align: center;
+}
+
+.demo .v-align-center > .v-widget {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.demo .v-align-right {
+	text-align: right;
+}
+
+.demo .v-align-right > .v-widget {
+	margin-left: auto;
+}
+
+.demo .v-has-caption, .demo .v-has-caption > .v-caption {
+	display: inline-block;
+}
+
+.demo .v-caption {
+	overflow: visible;
+	vertical-align: middle;
+}
+
+.demo .v-caption-on-left, .demo .v-caption-on-right {
+	white-space: nowrap;
+}
+
+.demo .v-caption-on-top > .v-caption, .demo .v-caption-on-bottom > .v-caption {
+	display: block;
+}
+
+.demo .v-caption-on-left > .v-caption {
+	padding-right: 0.5em;
+}
+
+.demo .v-caption-on-right > .v-caption {
+	vertical-align: top;
+}
+
+.demo .v-caption-on-left > .v-widget, .demo .v-caption-on-right > .v-widget {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.demo .v-has-caption.v-has-width > .v-widget {
+	width: 100% !important;
+}
+
+.demo .v-has-caption.v-has-height > .v-widget {
+	height: 100% !important;
+}
+
+.demo .v-errorindicator {
+	vertical-align: middle;
+}
+
+.demo .v-csslayout {
+	overflow: hidden;
+}
+
+.demo div.v-csslayout {
+	display: block;
+}
+
+.demo .v-csslayout-margin, .demo .v-csslayout-container {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-has-width > .v-csslayout-margin, .demo .v-has-width > .v-csslayout-margin > .v-csslayout-container {
+	width: 100%;
+}
+
+.demo .v-has-height > .v-csslayout-margin, .demo .v-has-height > .v-csslayout-margin > .v-csslayout-container {
+	height: 100%;
+}
+
+.demo .v-csslayout-margin-top {
+	padding-top: 12px;
+}
+
+.demo .v-csslayout-margin-bottom {
+	padding-bottom: 12px;
+}
+
+.demo .v-csslayout-margin-left {
+	padding-left: 12px;
+}
+
+.demo .v-csslayout-margin-right {
+	padding-right: 12px;
+}
+
+.demo .v-customlayout {
+	overflow: hidden;
+}
+
+.demo .v-datefield {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.demo .v-datefield-textfield {
+	vertical-align: top;
+}
+
+.v-ie .demo .v-datefield-button:after {
+	content: "\200B";
+}
+
+.demo .v-datefield-button {
+	cursor: pointer;
+	vertical-align: top;
+}
+
+.demo .v-has-width > input.v-datefield-textfield {
+	width: 100%;
+}
+
+.demo .v-datefield-prompt .v-datefield-textfield {
+	color: #999;
+	font-style: italic;
+}
+
+.demo .v-datefield .v-datefield-button-readonly {
+	display: none;
+}
+
+.demo .v-datefield-calendarpanel table {
+	width: 100%;
+}
+
+.demo .v-datefield-calendarpanel td {
+	padding: 0;
+	margin: 0;
+}
+
+.demo .v-datefield-calendarpanel:focus {
+	outline: none;
+}
+
+.demo .v-datefield-calendarpanel-header td {
+	text-align: center;
+}
+
+.demo .v-datefield-calendarpanel-month {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.demo .v-datefield-calendarpanel-weeknumber {
+	color: #999;
+	border-right: 1px solid #ddd;
+	font-size: 11.7px;
+}
+
+.demo .v-datefield-calendarpanel-day, .demo .v-datefield-calendarpanel-day-today {
+	cursor: pointer;
+}
+
+.demo .v-datefield-calendarpanel-day-today {
+	border: 1px solid #ddd;
+}
+
+.demo .v-disabled .v-datefield-calendarpanel-day, .demo .v-disabled .v-datefield-calendarpanel-day-today, .demo .v-disabled.v-datefield-popupcalendar .v-datefield-button {
+	cursor: default;
+}
+
+.demo .v-datefield-calendarpanel-day-disabled, .demo .v-datefield-calendarpanel-day-outside-range {
+	cursor: default;
+	opacity: 0.5;
+}
+
+.demo .v-datefield-calendarpanel-prevyear button.outside-range, .demo .v-datefield-calendarpanel-nextyear button.outside-range, .demo .v-datefield-calendarpanel-prevmonth button.outside-range, .demo .v-datefield-calendarpanel-nextmonth button.outside-range {
+	opacity: 0.5;
+}
+
+.demo .v-datefield-calendarpanel-day-selected {
+	cursor: default;
+	background: #333;
+	color: #fff;
+}
+
+.demo .v-datefield-calendarpanel-day-focused {
+	outline: 1px dotted black;
+}
+
+.demo .v-datefield-calendarpanel-day-offmonth {
+	color: #666;
+}
+
+.demo .v-datefield-time {
+	white-space: nowrap;
+}
+
+.demo .v-datefield-time .v-label {
+	display: inline;
+}
+
+.demo .v-datefield-popup {
+	background: #fff;
+}
+
+.v-ie9 .demo .v-datefield-popup, .v-ie10 .demo .v-datefield-popup, .v-ie11 .demo .v-datefield-popup {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.demo .v-datefield-popupcalendar input.v-datefield-textfield {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-inline-datefield {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.demo .v-inline-datefield-textfield {
+	vertical-align: top;
+}
+
+.v-ie .demo .v-inline-datefield-button:after {
+	content: "\200B";
+}
+
+.demo .v-inline-datefield-button {
+	cursor: pointer;
+	vertical-align: top;
+}
+
+.demo .v-has-width > input.v-inline-datefield-textfield {
+	width: 100%;
+}
+
+.demo .v-inline-datefield-prompt .v-inline-datefield-textfield {
+	color: #999;
+	font-style: italic;
+}
+
+.demo .v-inline-datefield .v-inline-datefield-button-readonly {
+	display: none;
+}
+
+.demo .v-inline-datefield-calendarpanel table {
+	width: 100%;
+}
+
+.demo .v-inline-datefield-calendarpanel td {
+	padding: 0;
+	margin: 0;
+}
+
+.demo .v-inline-datefield-calendarpanel:focus {
+	outline: none;
+}
+
+.demo .v-inline-datefield-calendarpanel-header td {
+	text-align: center;
+}
+
+.demo .v-inline-datefield-calendarpanel-month {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.demo .v-inline-datefield-calendarpanel-weeknumber {
+	color: #999;
+	border-right: 1px solid #ddd;
+	font-size: 11.7px;
+}
+
+.demo .v-inline-datefield-calendarpanel-day, .demo .v-inline-datefield-calendarpanel-day-today {
+	cursor: pointer;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-today {
+	border: 1px solid #ddd;
+}
+
+.demo .v-disabled .v-inline-datefield-calendarpanel-day, .demo .v-disabled .v-inline-datefield-calendarpanel-day-today, .demo .v-disabled.v-inline-datefield-popupcalendar .v-inline-datefield-button {
+	cursor: default;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-disabled, .demo .v-inline-datefield-calendarpanel-day-outside-range {
+	cursor: default;
+	opacity: 0.5;
+}
+
+.demo .v-inline-datefield-calendarpanel-prevyear button.outside-range, .demo .v-inline-datefield-calendarpanel-nextyear button.outside-range, .demo .v-inline-datefield-calendarpanel-prevmonth button.outside-range, .demo .v-inline-datefield-calendarpanel-nextmonth button.outside-range {
+	opacity: 0.5;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-selected {
+	cursor: default;
+	background: #333;
+	color: #fff;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-focused {
+	outline: 1px dotted black;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-offmonth {
+	color: #666;
+}
+
+.demo .v-inline-datefield-time {
+	white-space: nowrap;
+}
+
+.demo .v-inline-datefield-time .v-label {
+	display: inline;
+}
+
+.demo .v-inline-datefield-popup {
+	background: #fff;
+}
+
+.v-ie9 .demo .v-inline-datefield-popup, .v-ie10 .demo .v-inline-datefield-popup, .v-ie11 .demo .v-inline-datefield-popup {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.demo .v-inline-datefield-popupcalendar input.v-inline-datefield-textfield {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-ddwrapper {
+	padding: 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.demo [draggable=true] {
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+.v-ie .demo .v-ddwrapper a.drag-start {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: cyan;
+	filter: alpha(opacity=0);
+}
+
+.demo .v-ddwrapper-over {
+	border: 2px solid #1d9dff;
+	background-color: #bcdcff;
+	padding: 0;
+}
+
+.demo .v-ddwrapper-over {
+	background-color: rgba(169, 209, 255, 0.6);
+}
+
+.demo .no-box-drag-hints .v-ddwrapper-over {
+	border: none;
+	background-color: transparent;
+	padding: 2px;
+}
+
+.demo.v-app .v-ddwrapper-over-top, .demo .v-window .v-ddwrapper-over-top, .demo .v-popupview-popup .v-ddwrapper-over-top {
+	border: none;
+	border-top: 2px solid #1d9dff;
+	background-color: transparent;
+	padding: 2px;
+	padding-top: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.demo.v-app .v-ddwrapper-over-bottom, .demo .v-window .v-ddwrapper-over-bottom, .demo .v-popupview-popup .v-ddwrapper-over-bottom {
+	border: none;
+	border-bottom: 2px solid #1d9dff;
+	background-color: transparent;
+	padding: 2px;
+	padding-bottom: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.demo.v-app .v-ddwrapper-over-left, .demo .v-window .v-ddwrapper-over-left, .demo .v-popupview-popup .v-ddwrapper-over-left {
+	border: none;
+	border-left: 2px solid #1d9dff;
+	background-color: transparent;
+	padding: 2px;
+	padding-left: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.demo.v-app .v-ddwrapper-over-right, .demo .v-window .v-ddwrapper-over-right, .demo .v-popupview-popup .v-ddwrapper-over-right {
+	border: none;
+	border-right: 2px solid #1d9dff;
+	background-color: transparent;
+	padding: 2px;
+	padding-right: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.demo .v-ddwrapper, .demo .v-ddwrapper-over, .demo.v-app .v-ddwrapper-over-top, .demo .v-window .v-ddwrapper-over-top, .demo .v-popupview-popup .v-ddwrapper-over-top, .demo.v-app .v-ddwrapper-over-bottom, .demo .v-window .v-ddwrapper-over-bottom, .demo .v-popupview-popup .v-ddwrapper-over-bottom, .demo.v-app .v-ddwrapper-over-left, .demo .v-window .v-ddwrapper-over-left, .demo .v-popupview-popup .v-ddwrapper-over-left, .demo.v-app .v-ddwrapper-over-right, .demo .v-window .v-ddwrapper-over-right, .demo .v-popupview-popup .v-ddwrapper-over-right {
+	border-color: rgba(0, 109, 232, 0.6);
+}
+
+.demo .v-ddwrapper-over-top:before, .demo .v-ddwrapper-over-bottom:after, .demo .v-ddwrapper-over-left:before, .demo .v-ddwrapper-over-right:before {
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	margin-top: -4px;
+	margin-left: -2px;
+	background: transparent url(../base/common/img/drag-slot-dot.png) no-repeat;
+}
+
+.demo .v-ddwrapper-over-bottom:after {
+	margin-top: -2px;
+}
+
+.demo .v-ddwrapper-over-left:before, .demo .v-ddwrapper-over-right:before {
+	background-position: 0 -6px;
+	margin-top: -2px;
+	margin-left: -4px;
+}
+
+.demo .v-ddwrapper-over-right:before {
+	position: relative;
+	margin-bottom: -4px;
+	margin-right: -4px;
+	margin-left: 0;
+	width: auto;
+	background-position: 100% -6px;
+}
+
+.demo .no-horizontal-drag-hints .v-ddwrapper-over-left {
+	padding-left: 2px;
+	border-left: none;
+}
+
+.demo .no-horizontal-drag-hints .v-ddwrapper-over-right {
+	padding-right: 2px;
+	border-right: none;
+}
+
+.demo .no-vertical-drag-hints .v-ddwrapper-over-top {
+	padding-top: 2px;
+	border-top: none;
+}
+
+.demo .no-vertical-drag-hints .v-ddwrapper-over-bottom {
+	padding-bottom: 2px;
+	border-bottom: none;
+}
+
+.demo .no-horizontal-drag-hints .v-ddwrapper-over-left:before, .demo .no-horizontal-drag-hints .v-ddwrapper-over-right:before, .demo .no-vertical-drag-hints .v-ddwrapper-over-top:before, .demo .no-vertical-drag-hints .v-ddwrapper-over-bottom:after {
+	display: none;
+}
+
+.demo .v-table .v-embedded-image {
+	display: inline-block;
+}
+
+.demo .v-escalator {
+	position: relative;
+}
+
+.demo .v-escalator-scroller {
+	position: absolute;
+	z-index: 1;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-escalator-scroller-horizontal {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+}
+
+.demo .v-escalator-scroller-vertical {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
+}
+
+.demo .v-escalator-tablewrapper {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 5;
+}
+
+.demo .v-escalator-tablewrapper > table {
+	border-spacing: 0;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.demo .v-escalator-header-deco, .demo .v-escalator-footer-deco {
+	position: absolute;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-escalator-horizontal-scrollbar-deco {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-escalator-header, .demo .v-escalator-body, .demo .v-escalator-footer {
+	position: absolute;
+	left: 0;
+	width: inherit;
+	z-index: 10;
+}
+
+.demo .v-escalator-header, .demo .v-escalator-header-deco {
+	top: 0;
+}
+
+.demo .v-escalator-footer, .demo .v-escalator-footer-deco {
+	bottom: 0;
+}
+
+.demo .v-escalator-body {
+	z-index: 0;
+	top: 0;
+}
+
+.demo .v-escalator-body .v-escalator-row {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.demo .v-escalator-row {
+	display: block;
+}
+
+.v-ie8 .demo .v-escalator-row, .v-ie9 .demo .v-escalator-row {
+	float: left;
+	clear: left;
+	margin-top: 0;
+}
+
+.demo .v-escalator-row  > td, .demo .v-escalator-row  > th {
+	background-color: #fff;
+}
+
+.demo .v-escalator-row {
+	width: inherit;
+}
+
+.demo .v-escalator-cell {
+	display: block;
+	float: left;
+	padding: 2px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.demo .v-escalator-cell.frozen {
+	position: relative;
+	z-index: 1;
+}
+
+.demo .v-escalator-spacer {
+	position: absolute;
+	display: block;
+	background-color: #fff;
+}
+
+.demo .v-escalator-spacer  > td {
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.v-ie8 .demo .v-escalator-spacer, .v-ie9 .demo .v-escalator-spacer {
+	margin-top: 0;
+}
+
+.demo .v-formlayout.v-has-width > table {
+	width: 100%;
+}
+
+.demo .v-formlayout.v-has-height > table {
+	height: 100%;
+}
+
+.demo .v-formlayout-cell .v-errorindicator {
+	display: block;
+}
+
+.demo .v-formlayout-error-indicator {
+	width: 12px;
+}
+
+.demo .v-formlayout-captioncell {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.demo .v-formlayout-errorcell, .demo .v-formlayout-captioncell {
+	width: 1px;
+}
+
+.demo .v-formlayout-captioncell .v-caption {
+	overflow: visible;
+}
+
+.demo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-captioncell, .demo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-contentcell, .demo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-errorcell {
+	padding-top: 6px;
+}
+
+.demo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-captioncell, .demo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-contentcell, .demo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-errorcell {
+	padding-top: 0;
+}
+
+.demo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-captioncell, .demo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-contentcell, .demo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-errorcell {
+	padding-top: 12px;
+}
+
+.demo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-captioncell, .demo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-contentcell, .demo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-errorcell {
+	padding-bottom: 12px;
+}
+
+.demo .v-formlayout-margin-left > tbody > .v-formlayout-row > .v-formlayout-captioncell {
+	padding-left: 12px;
+}
+
+.demo .v-formlayout-margin-right > tbody > .v-formlayout-row > .v-formlayout-contentcell {
+	padding-right: 12px;
+}
+
+.demo .v-formlayout-captioncell .v-caption .v-required-field-indicator {
+	float: none;
+}
+
+.demo .v-grid {
+	position: relative;
+}
+
+.demo .v-grid-scroller {
+	position: absolute;
+	z-index: 1;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-grid-scroller-horizontal {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+}
+
+.demo .v-grid-scroller-vertical {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
+}
+
+.demo .v-grid-tablewrapper {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 5;
+}
+
+.demo .v-grid-tablewrapper > table {
+	border-spacing: 0;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.demo .v-grid-header-deco, .demo .v-grid-footer-deco {
+	position: absolute;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-grid-horizontal-scrollbar-deco {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-grid-header, .demo .v-grid-body, .demo .v-grid-footer {
+	position: absolute;
+	left: 0;
+	width: inherit;
+	z-index: 10;
+}
+
+.demo .v-grid-header, .demo .v-grid-header-deco {
+	top: 0;
+}
+
+.demo .v-grid-footer, .demo .v-grid-footer-deco {
+	bottom: 0;
+}
+
+.demo .v-grid-body {
+	z-index: 0;
+	top: 0;
+}
+
+.demo .v-grid-body .v-grid-row {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.demo .v-grid-row {
+	display: block;
+}
+
+.v-ie8 .demo .v-grid-row, .v-ie9 .demo .v-grid-row {
+	float: left;
+	clear: left;
+	margin-top: 0;
+}
+
+.demo .v-grid-row  > td, .demo .v-grid-row  > th {
+	background-color: #fff;
+}
+
+.demo .v-grid-row {
+	width: inherit;
+}
+
+.demo .v-grid-cell {
+	display: block;
+	float: left;
+	padding: 2px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.demo .v-grid-cell.frozen {
+	position: relative;
+	z-index: 1;
+}
+
+.demo .v-grid-spacer {
+	position: absolute;
+	display: block;
+	background-color: #fff;
+}
+
+.demo .v-grid-spacer  > td {
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.v-ie8 .demo .v-grid-spacer, .v-ie9 .demo .v-grid-spacer {
+	margin-top: 0;
+}
+
+.demo .v-grid {
+	outline: none;
+}
+
+.demo .v-grid-scroller-vertical, .demo .v-grid-scroller-horizontal {
+	border: 1px solid #ddd;
+}
+
+.demo .v-grid-scroller-vertical {
+	border-left: none;
+}
+
+.demo .v-grid-scroller-horizontal {
+	border-top: none;
+}
+
+.demo .v-grid-tablewrapper {
+	border: 1px solid #ddd;
+}
+
+.demo .v-grid .header-drag-table {
+	border-spacing: 0;
+	position: relative;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.demo .v-grid .header-drag-table .v-grid-header {
+	position: absolute;
+}
+
+.demo .v-grid .header-drag-table .v-grid-header  > .v-grid-cell {
+	border: 1px solid #ddd;
+	margin-top: -10px;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	z-index: 30000;
+}
+
+.demo .v-grid .header-drag-table .v-grid-header  > .v-grid-drop-marker {
+	background-color: #bfbfbf;
+	position: absolute;
+	width: 3px;
+}
+
+.demo .v-grid-sidebar.v-contextmenu {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 0;
+	z-index: 5;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+	padding: 0 4px;
+	text-align: right;
+	line-height: 1;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button::-moz-focus-inner {
+	border: 0;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button:after {
+	content: "\f0c9";
+	display: block;
+	font-family: FontAwesome, sans-serif;
+	font-size: 13px;
+}
+
+.demo .v-grid-sidebar.v-contextmenu.closed {
+	border-radius: 0;
+}
+
+.demo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
+	width: 100%;
+}
+
+.demo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button:after {
+	content: "\f0c9";
+	font-size: 13px;
+	line-height: 1;
+}
+
+.v-ie .demo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
+	vertical-align: middle;
+}
+
+.v-ie8 .demo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button:after {
+	vertical-align: middle;
+	text-align: center;
+	display: inline;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content {
+	padding: 4px 0;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content .gwt-MenuBar .gwt-MenuItem .column-hiding-toggle {
+	text-shadow: none;
+}
+
+.demo .v-grid-cell {
+	background-color: #fff;
+	padding: 0 5px;
+	line-height: 20px;
+	text-overflow: ellipsis;
+}
+
+.demo .v-grid-cell  > * {
+	line-height: 1.4;
+	vertical-align: middle;
+}
+
+.demo .v-grid-cell  > div {
+	display: inline-block;
+}
+
+.demo .v-grid-cell.frozen {
+	-webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #ddd;
+}
+
+.demo .v-grid-cell.frozen  + th, .demo .v-grid-cell.frozen  + td {
+	border-left: none;
+}
+
+.demo .v-grid-row > td, .demo .v-grid-editor-cells > div {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.demo .v-grid-row > td:first-child, .demo .v-grid-editor-cells > div:first-child {
+	border-left: none;
+}
+
+.demo .v-grid-editor-cells.frozen > div {
+	-webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #ddd;
+	border-left: none;
+}
+
+.demo .v-grid-row-stripe > td {
+	background-color: #f2f2f2;
+}
+
+.demo .v-grid-row-selected > td {
+	background: #bfbfbf;
+}
+
+.demo .v-grid-row-focused > td {
+	
+}
+
+.demo .v-grid-header th {
+	position: relative;
+	background-color: #fff;
+	font-size: 13px;
+	font-weight: inherit;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	
+	text-align: left;
+}
+
+.demo .v-grid-header th:first-child {
+	border-left: none;
+}
+
+.demo .v-grid-header .sort-asc, .demo .v-grid-header .sort-desc {
+	padding-right: 21px;
+}
+
+.demo .v-grid-header .sort-asc:after, .demo .v-grid-header .sort-desc:after {
+	font-family: FontAwesome, sans-serif;
+	content: "\f0de" " " attr(sort-order);
+	position: absolute;
+	right: 5px;
+	font-size: 11px;
+}
+
+.demo .v-grid-header .sort-desc:after {
+	content: "\f0dd" " " attr(sort-order);
+}
+
+.demo .v-grid-footer td {
+	background-color: #fff;
+	font-size: 13px;
+	font-weight: inherit;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: none;
+	
+}
+
+.demo .v-grid-footer td:first-child {
+	border-left: none;
+}
+
+.demo .v-grid-header-deco {
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.demo .v-grid-footer-deco {
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.demo .v-grid-horizontal-scrollbar-deco {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+
+.demo .v-grid-cell-focused {
+	position: relative;
+}
+
+.demo .v-grid-cell-focused:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid;
+	display: none;
+	pointer-events: none;
+}
+
+.ie8 .demo .v-grid-cell-focused:before, .ie9 .demo .v-grid-cell-focused:before, .ie10 .demo .v-grid-cell-focused:before {
+	content: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==);
+}
+
+.demo .v-grid:focus .v-grid-cell-focused:before {
+	display: block;
+}
+
+.demo .v-grid.v-disabled:focus .v-grid-cell-focused:before {
+	display: none;
+}
+
+.demo .v-grid-editor {
+	position: absolute;
+	z-index: 20;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin-top: -1px;
+	-webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+}
+
+.demo .v-grid-editor-cells {
+	position: relative;
+	white-space: nowrap;
+}
+
+.demo .v-grid-editor-cells.frozen {
+	z-index: 2;
+}
+
+.demo .v-grid-editor-cells  > div {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	background: #fff;
+}
+
+.demo .v-grid-editor-cells  > div:first-child {
+	border-left: none;
+}
+
+.demo .v-grid-editor-cells  > div  > * {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.demo .v-grid-editor-cells  > div .v-textfield, .demo .v-grid-editor-cells  > div .v-datefield, .demo .v-grid-editor-cells  > div .v-filterselect {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+.v-ie8 .demo .v-grid-editor-cells  > div .v-datefield-button {
+	margin-left: -30px;
+}
+
+.v-ie8 .demo .v-grid-editor-cells  > div .v-filterselect-button {
+	margin-left: -27px;
+}
+
+.demo .v-grid-editor-cells  > div .v-select, .demo .v-grid-editor-cells  > div .v-select-select {
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.demo .v-grid-editor-cells .error::before {
+	position: absolute;
+	display: block;
+	height: 0;
+	width: 0;
+	content: "";
+	border-top: 5px solid red;
+	border-right: 5px solid transparent;
+}
+
+.demo .v-grid-editor-cells .error, .demo .v-grid-editor-cells .error > input {
+	background-color: #fee;
+}
+
+.demo .v-grid-editor-footer {
+	display: table;
+	height: 20px;
+	border-top: 1px solid #ddd;
+	margin-top: -1px;
+	background: #fff;
+	padding: 0 5px;
+}
+
+.demo .v-grid-editor-footer  + .v-grid-editor-cells > div {
+	border-bottom: none;
+	border-top: 1px solid #ddd;
+}
+
+.demo .v-grid-editor-footer:first-child {
+	border-top: none;
+	margin-top: 0;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: -1px;
+}
+
+.demo .v-grid-editor-message, .demo .v-grid-editor-buttons {
+	display: table-cell;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.demo .v-grid-editor-message {
+	width: 100%;
+	position: relative;
+}
+
+.demo .v-grid-editor-message  > div {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 20px;
+	top: 0;
+}
+
+.demo .v-grid-editor-save {
+	margin-right: 4px;
+}
+
+.demo .v-grid-spacer {
+	padding-left: 1px;
+}
+
+.demo .v-grid-spacer > td {
+	display: block;
+	padding: 0;
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.demo .v-grid-spacer.stripe > td {
+	background-color: #f2f2f2;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.demo .v-grid-spacer-deco-container {
+	border-top: 1px solid transparent;
+	position: relative;
+	top: 0;
+	z-index: 5;
+}
+
+.demo .v-grid-spacer-deco {
+	top: 0;
+	left: 0;
+	width: 2px;
+	background-color: #bfbfbf;
+	position: absolute;
+	height: 100%;
+	pointer-events: none;
+}
+
+.ie8 .demo .v-grid-spacer-deco:before, .ie9 .demo .v-grid-spacer-deco:before, .ie10 .demo .v-grid-spacer-deco:before {
+	content: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==);
+}
+
+.demo .v-grid-cell > .v-progressbar {
+	width: 100%;
+}
+
+.demo .v-gridlayout {
+	position: relative;
+}
+
+.demo .v-gridlayout-slot {
+	position: absolute;
+}
+
+.demo .v-gridlayout-margin-top {
+	padding-top: 12px;
+}
+
+.demo .v-gridlayout-margin-bottom {
+	padding-bottom: 12px;
+}
+
+.demo .v-gridlayout-margin-left {
+	padding-left: 12px;
+}
+
+.demo .v-gridlayout-margin-right {
+	padding-right: 12px;
+}
+
+.demo .v-gridlayout-spacing-on {
+	padding-left: 6px;
+	padding-top: 6px;
+	overflow: hidden;
+}
+
+.demo .v-gridlayout-spacing, .demo .v-gridlayout-spacing-off {
+	padding-left: 0;
+	padding-top: 0;
+}
+
+.demo .v-gridlayout-spacing-off {
+	overflow: hidden;
+}
+
+.demo .v-label {
+	overflow: hidden;
+}
+
+.demo .v-label.v-has-width {
+	white-space: normal;
+}
+
+.demo .v-link {
+	white-space: nowrap;
+}
+
+.demo .v-link a {
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.demo .v-link span {
+	text-decoration: underline;
+	vertical-align: middle;
+}
+
+.demo .v-disabled a {
+	cursor: default;
+}
+
+.demo .v-link img {
+	vertical-align: middle;
+	border: none;
+}
+
+.demo .v-loginform {
+	height: 140px;
+	width: 200px;
+}
+
+.demo .v-app-loginpage .v-button {
+	float: left;
+}
+
+.demo .v-menubar {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.demo .v-menubar .v-menubar-menuitem {
+	cursor: default;
+	vertical-align: middle;
+	white-space: nowrap;
+	display: inline;
+	display: inline-block;
+	zoom: 1;
+}
+
+.demo .v-menubar .v-menubar-menuitem-caption .v-icon {
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.demo .v-menubar-submenu {
+	background: #fff;
+}
+
+.demo .v-menubar-menuitem-selected {
+	background: #333;
+	color: #fff;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem {
+	cursor: default;
+	display: block;
+	position: relative;
+	padding-right: 1.5em;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem-caption {
+	display: block;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem *, .demo .v-menubar-submenu .v-menubar-menuitem-caption * {
+	white-space: nowrap;
+}
+
+.demo .v-menubar-submenu-indicator {
+	display: none;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.demo .v-menubar-submenu .v-menubar-submenu-indicator {
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 1em;
+	height: 1em;
+	font-size: 11.7px;
+}
+
+.demo .v-menubar-menuitem-disabled, .demo .v-menubar span.v-menubar-menuitem-disabled:hover, .demo .v-menubar span.v-menubar-menuitem-disabled:focus, .demo .v-menubar span.v-menubar-menuitem-disabled:active {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.v-ie8 .demo .v-menubar-menuitem-disabled, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:hover, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:focus, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:active {
+	filter: none;
+	color: #999;
+}
+
+.v-ie8 .demo .v-menubar-menuitem-disabled img, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:hover img, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:focus img, .v-ie8 .demo .v-menubar span.v-menubar-menuitem-disabled:active img {
+	filter: alpha(opacity=50);
+}
+
+.demo .v-menubar-more-menuitem {
+	font-family: arial, helvetica, sans-serif;
+}
+
+.demo .v-menubar-separator {
+	overflow: hidden;
+}
+
+.demo .v-menubar-separator span {
+	display: block;
+	text-indent: -9999px;
+	font-size: 1px;
+	line-height: 1px;
+	border-top: 1px solid #ddd;
+	margin: 3px 0 2px;
+	overflow: hidden;
+}
+
+.demo .v-menubar .v-icon, .demo .v-menubar-submenu .v-icon {
+	margin-right: 3px;
+}
+
+.demo .v-menubar:focus, .demo .v-menubar-popup:focus, .demo .v-menubar-popup .popupContent:focus, .demo .v-menubar-popup .popupContent .v-menubar-submenu:focus {
+	outline: none;
+}
+
+.demo .v-menubar-submenu-check-column .v-menubar-menuitem {
+	padding-left: 6px;
+}
+
+.demo .v-menubar-submenu-check-column .v-menubar-menuitem-caption {
+	padding-left: 18px;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem-checked .v-menubar-menuitem-caption {
+	background: transparent url(../base/menubar/img/check.gif) no-repeat left;
+}
+
+.demo .v-Notification {
+	background: #999;
+	color: #fff;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 1em;
+	max-width: 85%;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.demo .v-Notification-caption, .demo .v-Notification-description, .demo .v-Notification-details {
+	display: inline;
+	margin: 0 0.5em 0 0;
+}
+
+.demo .v-Notification-warning {
+	background: orange;
+}
+
+.demo .v-Notification-error {
+	background: red;
+}
+
+.demo .v-Notification-tray .v-Notification-caption, .demo .v-Notification-tray .v-Notification-description {
+	display: block;
+}
+
+.demo .v-Notification-system {
+	background-color: red;
+}
+
+.demo .v-Notification-system .v-Notification-caption {
+	display: block;
+	margin: 0;
+}
+
+.demo .v-Notification-animate-out {
+	-webkit-animation: v-notification-animate-out 400ms;
+	-moz-animation: v-notification-animate-out 400ms;
+	animation: v-notification-animate-out 400ms;
+}
+
+.demo .v-Notification.v-position-top {
+	top: 0;
+}
+
+.demo .v-Notification.v-position-right {
+	right: 0;
+}
+
+.demo .v-Notification.v-position-bottom {
+	bottom: 0;
+}
+
+.demo .v-Notification.v-position-left {
+	left: 0;
+}
+
+.demo .v-Notification.v-position-assistive {
+	top: -9999px;
+	left: -9999px;
+}
+
+.demo .v-orderedlayout, .demo .v-horizontallayout, .demo .v-verticallayout {
+	position: relative;
+}
+
+.demo .v-orderedlayout-margin-top, .demo .v-horizontallayout-margin-top, .demo .v-verticallayout-margin-top {
+	padding-top: 12px;
+}
+
+.demo .v-orderedlayout-margin-right, .demo .v-horizontallayout-margin-right, .demo .v-verticallayout-margin-right {
+	padding-right: 12px;
+}
+
+.demo .v-orderedlayout-margin-bottom, .demo .v-horizontallayout-margin-bottom, .demo .v-verticallayout-margin-bottom {
+	padding-bottom: 12px;
+}
+
+.demo .v-orderedlayout-margin-left, .demo .v-horizontallayout-margin-left, .demo .v-verticallayout-margin-left {
+	padding-left: 12px;
+}
+
+.demo .v-orderedlayout-spacing-on, .demo .v-horizontallayout-spacing-on, .demo .v-verticallayout-spacing-on {
+	padding-top: 6px;
+	padding-left: 6px;
+}
+
+.demo .v-orderedlayout-spacing-off, .demo .v-horizontallayout-spacing-off, .demo .v-verticallayout-spacing-off {
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.demo .v-horizontallayout-slot, .demo .v-verticallayout-slot {
+	position: absolute;
+}
+
+.demo .v-panel, .demo .v-panel-caption, .demo .v-panel-content, .demo .v-panel-deco, .demo .v-panel-light, .demo .v-panel-caption-light, .demo .v-panel-content-light, .demo .v-panel-deco-light {
+	outline: none;
+	text-align: left;
+}
+
+.demo .v-panel-caption .v-errorindicator {
+	float: none;
+	display: inline;
+}
+
+.demo .v-panel-caption .v-icon {
+	display: inline;
+	vertical-align: middle;
+}
+
+.demo .v-panel-caption span {
+	vertical-align: middle;
+}
+
+.demo .v-panel-caption {
+	white-space: nowrap;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+.demo .v-panel-nocaption {
+	overflow: hidden;
+}
+
+.demo .v-panel-content {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-panel.v-has-width > .v-panel-content {
+	width: 100%;
+}
+
+.demo .v-panel.v-has-height > .v-panel-content {
+	height: 100%;
+}
+
+.demo .v-popupview {
+	cursor: pointer;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+
+.demo .v-popupview-popup {
+	overflow: auto;
+}
+
+.demo .v-popupview-loading {
+	width: 30px;
+	height: 30px;
+	background: transparent url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
+}
+
+.demo .v-progressbar {
+	width: 150px;
+}
+
+.demo .v-progressbar-wrapper {
+	height: 7px;
+	border: 1px solid #ddd;
+}
+
+.demo .v-progressbar-indicator {
+	height: 7px;
+	background: #ddd;
+}
+
+.demo div.v-progressbar-indeterminate {
+	height: 20px;
+	width: 20px;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.demo .v-progressbar-indeterminate .v-progressbar-wrapper, .demo .v-progressbar-indeterminate .v-progressbar-indicator, .demo .v-progressbar-indeterminate-disabled .v-progressbar-wrapper, .demo .v-progressbar-indeterminate-disabled .v-progressbar-indicator {
+	display: none;
+}
+
+.demo div.v-progressbar-indeterminate-disabled {
+	height: 20px;
+	width: 20px;
+	background: transparent;
+}
+
+.demo .v-progressindicator {
+	width: 150px;
+}
+
+.demo .v-progressindicator-wrapper {
+	height: 7px;
+	border: 1px solid #ddd;
+}
+
+.demo .v-progressindicator-indicator {
+	height: 7px;
+	background: #ddd;
+}
+
+.demo div.v-progressindicator-indeterminate {
+	height: 20px;
+	width: 20px;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.demo .v-progressindicator-indeterminate .v-progressindicator-wrapper, .demo .v-progressindicator-indeterminate .v-progressindicator-indicator, .demo .v-progressindicator-indeterminate-disabled .v-progressindicator-wrapper, .demo .v-progressindicator-indeterminate-disabled .v-progressindicator-indicator {
+	display: none;
+}
+
+.demo div.v-progressindicator-indeterminate-disabled {
+	height: 20px;
+	width: 20px;
+	background: transparent;
+}
+
+.demo .v-select {
+	text-align: left;
+}
+
+.demo .v-select-optiongroup .v-select-option {
+	display: block;
+	white-space: nowrap;
+}
+
+.demo .v-select-optiongroup .v-icon {
+	vertical-align: middle;
+	white-space: nowrap;
+	margin: 0 2px;
+}
+
+.v-ie .demo .v-select-optiongroup .v-select-option {
+	zoom: 1;
+}
+
+.demo .v-select-select {
+	display: block;
+}
+
+.demo .v-select-twincol {
+	white-space: nowrap;
+}
+
+.demo .v-select-twincol-options {
+	float: left;
+}
+
+.demo .v-select-twincol-caption-left {
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.demo .v-select-twincol-selections {
+	font-weight: bold;
+}
+
+.demo .v-select-twincol-caption-right {
+	float: right;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.demo .v-select-twincol-buttons {
+	float: left;
+	text-align: center;
+}
+
+.demo .v-select-twincol-buttons .v-select-twincol-deco {
+	clear: both;
+}
+
+.demo .v-select-twincol .v-textfield {
+	display: block;
+	float: left;
+	clear: left;
+}
+
+.demo .v-select-twincol .v-button {
+	float: left;
+}
+
+.demo .v-select-twincol-buttons .v-button {
+	float: none;
+}
+
+.demo .v-filterselect {
+	white-space: nowrap;
+	text-align: left;
+	display: inline-block;
+	padding-right: 1em;
+}
+
+.demo .v-filterselect .v-icon {
+	float: left;
+}
+
+.demo.v-app .v-filterselect-input, .demo .v-window .v-filterselect-input, .demo .v-popupview-popup .v-filterselect-input {
+	margin: 0;
+	float: left;
+	-webkit-border-radius: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-filterselect-prompt .v-filterselect-input {
+	color: #999;
+	font-style: italic;
+}
+
+.demo .v-filterselect-button {
+	display: inline-block;
+	cursor: pointer;
+	width: 1em;
+	margin-right: -1em;
+	height: 1em;
+	background: transparent url(../base/common/img/sprites.png) no-repeat -5px -8px;
+}
+
+.demo .v-filterselect.v-readonly .v-filterselect-button {
+	display: none;
+}
+
+.demo .v-filterselect.v-readonly, .demo .v-filterselect.v-readonly .v-filterselect-input {
+	background: transparent;
+}
+
+.demo .v-filterselect-suggestpopup {
+	background: #fff;
+	border: 1px solid #eee;
+}
+
+.demo .v-filterselect-suggestmenu table {
+	border-collapse: collapse;
+	border: none;
+	vertical-align: top;
+}
+
+.demo .v-filterselect-suggestmenu .gwt-MenuItem {
+	white-space: nowrap;
+}
+
+.demo .v-filterselect-suggestmenu .gwt-MenuItem .v-icon {
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+.demo .v-filterselect-suggestmenu .gwt-MenuItem span {
+	vertical-align: middle;
+}
+
+.demo .v-filterselect-suggestmenu .gwt-MenuItem-selected {
+	background: #333;
+	color: #fff;
+}
+
+.demo .v-filterselect-nextpage, .demo .v-filterselect-nextpage-off, .demo .v-filterselect-prevpage-off, .demo .v-filterselect-prevpage {
+	width: 100%;
+	background: #aaa;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.demo .v-filterselect-nextpage-off, .demo .v-filterselect-prevpage-off {
+	color: #666;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: default;
+}
+
+.demo .v-filterselect-nextpage-off span, .demo .v-filterselect-prevpage-off span {
+	cursor: default;
+}
+
+.demo .v-filterselect-status {
+	white-space: nowrap;
+	text-align: center;
+}
+
+.demo .v-filterselect-no-input .v-filterselect-input {
+	cursor: default;
+}
+
+.demo .v-shadow {
+	position: absolute;
+	display: none;
+	pointer-events: none;
+}
+
+.v-ie8 .demo .v-shadow {
+	display: block;
+}
+
+.demo .v-shadow .top-left {
+	position: absolute;
+	overflow: hidden;
+	top: -3px;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background: transparent url(../base/shadow/img/top-left.png);
+}
+
+.demo .v-shadow .top {
+	position: absolute;
+	overflow: hidden;
+	top: -3px;
+	left: 5px;
+	height: 10px;
+	right: 5px;
+	background: transparent url(../base/shadow/img/top.png);
+}
+
+.demo .v-shadow .top-right {
+	position: absolute;
+	overflow: hidden;
+	top: -3px;
+	right: -5px;
+	width: 10px;
+	height: 10px;
+	background: transparent url(../base/shadow/img/top-right.png);
+}
+
+.demo .v-shadow .left {
+	position: absolute;
+	overflow: hidden;
+	top: 7px;
+	left: -5px;
+	width: 10px;
+	bottom: 3px;
+	background: transparent url(../base/shadow/img/left.png);
+}
+
+.demo .v-shadow .center {
+	position: absolute;
+	overflow: hidden;
+	top: 7px;
+	left: 5px;
+	bottom: 3px;
+	right: 5px;
+	background: transparent url(../base/shadow/img/center.png);
+}
+
+.demo .v-shadow .right {
+	position: absolute;
+	overflow: hidden;
+	top: 7px;
+	right: -5px;
+	width: 10px;
+	bottom: 3px;
+	background: transparent url(../base/shadow/img/right.png);
+}
+
+.demo .v-shadow .bottom-left {
+	position: absolute;
+	overflow: hidden;
+	bottom: -7px;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background: transparent url(../base/shadow/img/bottom-left.png);
+}
+
+.demo .v-shadow .bottom {
+	position: absolute;
+	overflow: hidden;
+	bottom: -7px;
+	left: 5px;
+	right: 5px;
+	height: 10px;
+	background: transparent url(../base/shadow/img/bottom.png);
+}
+
+.demo .v-shadow .bottom-right {
+	position: absolute;
+	overflow: hidden;
+	bottom: -7px;
+	right: -5px;
+	width: 10px;
+	height: 10px;
+	background: transparent url(../base/shadow/img/bottom-right.png);
+}
+
+.demo .v-slider {
+	margin: 5px 0;
+}
+
+.demo .v-slider-base {
+	height: 2px;
+	border-top: 1px solid #ddd;
+	background: #eee;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #eee;
+}
+
+.demo .v-slider-handle {
+	background: #aaa;
+	width: 12px;
+	height: 12px;
+	margin-top: -5px;
+	font-size: 0;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.demo .v-slider-vertical {
+	width: 2px;
+	height: auto;
+	margin: 0 5px;
+	border: none;
+	border-left: 1px solid #cccfd0;
+	border-right: 1px solid #cccfd0;
+}
+
+.demo .v-slider-vertical .v-slider-base {
+	width: 2px;
+	border-bottom: 1px solid #eee;
+	border-right: none;
+}
+
+.demo .v-slider-vertical .v-slider-handle {
+	width: 12px;
+	height: 12px;
+	font-size: 0;
+	margin-left: -5px;
+}
+
+.demo .v-slider-feedback {
+	padding: 2px 5px;
+	background: #444;
+	color: #fff;
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin: -2px 0 0 2px;
+	text-shadow: 0 1px 0 #000;
+}
+
+.demo .v-splitpanel-horizontal, .demo .v-splitpanel-vertical {
+	overflow: hidden;
+}
+
+.demo .v-splitpanel-hsplitter {
+	width: 6px;
+}
+
+.demo .v-splitpanel-hsplitter div {
+	width: 6px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: #ddd;
+	cursor: e-resize;
+	cursor: col-resize;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.demo .v-disabled .v-splitpanel-hsplitter div {
+	cursor: default;
+}
+
+.demo .v-splitpanel-vsplitter {
+	height: 6px;
+}
+
+.demo .v-splitpanel-vsplitter div {
+	height: 6px;
+	background: #ddd;
+	cursor: s-resize;
+	cursor: row-resize;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.demo .v-disabled .v-splitpanel-vsplitter div {
+	cursor: default;
+}
+
+.demo .v-table {
+	overflow: hidden;
+	text-align: left;
+}
+
+.demo .v-table-header-wrap {
+	overflow: hidden;
+	border: 1px solid #aaa;
+	border-bottom: none;
+	background: #efefef;
+}
+
+.demo .v-table-header table, .demo .v-table-table {
+	border-spacing: 0;
+	border-collapse: separate;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.demo .v-table-table {
+	font-size: 13px;
+}
+
+.demo .v-table-header td {
+	padding: 0;
+}
+
+.demo .v-table-header-cell, .demo .v-table-header-cell-asc, .demo .v-table-header-cell-desc {
+	cursor: pointer;
+}
+
+.demo .v-table.v-disabled .v-table-header-cell, .demo .v-table.v-disabled .v-table-header-cell-asc, .demo .v-table.v-disabled .v-table-header-cell-desc {
+	cursor: default;
+}
+
+.demo .v-table-footer-wrap {
+	overflow: hidden;
+	border: 1px solid #aaa;
+	border-top: none;
+	background: #efefef;
+}
+
+.demo .v-table-footer table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.demo .v-table-footer td {
+	padding: 0;
+	border-right: 1px solid #aaa;
+}
+
+.demo .v-table-footer-cell {
+	cursor: pointer;
+}
+
+.demo .v-table-footer-container {
+	float: right;
+	padding-right: 6px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.demo .v-table-resizer {
+	display: block;
+	height: 1.2em;
+	float: right;
+	background: #aaa;
+	cursor: e-resize;
+	cursor: col-resize;
+	width: 1px;
+	overflow: hidden;
+}
+
+.demo .v-table.v-disabled .v-table-resizer {
+	cursor: default;
+}
+
+.demo .v-table-caption-container {
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: 6px;
+}
+
+.demo .v-table-caption-container-align-right {
+	float: right;
+}
+
+.demo .v-table-sort-indicator {
+	width: 0px;
+	height: 1.2em;
+	float: right;
+}
+
+.demo .v-table-header-cell-asc .v-table-sort-indicator, .demo .v-table-header-cell-desc .v-table-sort-indicator {
+	width: 16px;
+	height: 1.2em;
+	float: right;
+}
+
+.demo .v-table-header-cell-asc .v-table-sort-indicator {
+	background: transparent url(../base/common/img/sprites.png) no-repeat right 6px;
+}
+
+.demo .v-table-header-cell-desc .v-table-sort-indicator {
+	background: transparent url(../base/common/img/sprites.png) no-repeat right -10px;
+}
+
+.demo .v-table-caption-container-align-center {
+	text-align: center;
+}
+
+.demo .v-table-caption-container-align-right {
+	text-align: right;
+}
+
+.demo .v-table-caption-container .v-icon, .demo .v-table-header-drag .v-icon {
+	vertical-align: middle;
+}
+
+.demo .v-table-body {
+	border: 1px solid #aaa;
+}
+
+.demo .v-table-row-spacer {
+	height: 10px;
+	overflow: hidden;
+}
+
+.demo .v-table-row, .demo .v-table-row-odd {
+	background: #fff;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.demo .v-table-generated-row {
+	background: #efefef;
+}
+
+.demo .v-table-body-noselection .v-table-row, .demo .v-table-body-noselection .v-table-row-odd {
+	cursor: default;
+}
+
+.demo .v-table .v-selected {
+	background: #999;
+	color: #fff;
+}
+
+.demo .v-table-cell-content {
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0 6px;
+	border-right: 1px solid #aaa;
+}
+
+.demo .v-table-cell-wrapper {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.demo .v-table-cell-wrapper-align-center {
+	text-align: center;
+}
+
+.demo .v-table-cell-wrapper-align-right {
+	text-align: right;
+}
+
+.demo .v-table-column-selector {
+	float: right;
+	background: transparent url(../base/common/img/sprites.png) no-repeat 4px -37px;
+	margin: -1.2em 0 0 0;
+	height: 1.2em;
+	width: 14px;
+	position: relative;
+	cursor: pointer;
+}
+
+.demo .v-table.v-disabled .v-table-column-selector {
+	cursor: default;
+}
+
+.demo .v-table-focus-slot-left {
+	border-left: 2px solid #999;
+	float: none;
+	margin-bottom: -1.2em;
+	width: auto;
+	background: transparent;
+	border-right: 1px solid #aaa;
+}
+
+.demo .v-table-focus-slot-right {
+	border-right: 2px solid #999;
+	margin-left: -2px;
+}
+
+.demo .v-table-header-drag {
+	position: absolute;
+	background: #efefef;
+	border: 1px solid #eee;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	margin-top: 20px;
+	z-index: 30000;
+}
+
+.demo .v-table-header-drag .v-icon {
+	vertical-align: middle;
+}
+
+.demo .v-table-scrollposition {
+	width: 160px;
+	background: #eee;
+	border: 1px solid #aaa;
+}
+
+.demo .v-table-scrollposition span {
+	display: block;
+	text-align: center;
+}
+
+.demo .v-table-body:focus, .demo .v-table-body-wrapper:focus {
+	outline: none;
+}
+
+.demo .v-table-body.focused {
+	border-color: #388ddd;
+}
+
+.demo .v-table-focus .v-table-cell-content {
+	border-top: 1px dotted #0066bd;
+	border-bottom: 1px dotted #0066bd;
+}
+
+.demo .v-table-focus .v-table-cell-wrapper {
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.demo .v-off {
+	color: #ddd;
+}
+
+.demo .v-table .v-checkbox {
+	display: inline-block;
+}
+
+.demo .v-table-drag .v-table-body {
+	border-color: #1d9dff;
+}
+
+.demo .v-table-row-drag-middle .v-table-cell-content {
+	background-color: #bcdcff;
+}
+
+.demo .v-table-row-drag-top .v-table-cell-content {
+	border-top: 2px solid #1d9dff;
+}
+
+.demo .v-table-row-drag-top .v-table-cell-wrapper {
+	margin-top: -2px;
+}
+
+.demo .v-table-row-drag-bottom .v-table-cell-content {
+	border-bottom: 2px solid #1d9dff;
+}
+
+.demo .v-table-row-drag-bottom .v-table-cell-wrapper {
+	margin-bottom: -2px;
+}
+
+.demo .v-table-row-drag-top .v-table-cell-content:first-child:before, .demo .v-table-row-drag-bottom .v-table-cell-content:first-child:after {
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	margin-top: -4px;
+	margin-left: -6px;
+	background: transparent url(../base/common/img/drag-slot-dot.png);
+}
+
+.v-ff .demo .v-table-row-drag-bottom .v-table-cell-content:first-child:after, .v-ie .demo .v-table-row-drag-bottom .v-table-cell-content:first-child:after {
+	margin-top: -2px;
+}
+
+.demo .v-tabsheet, .demo .v-tabsheet-content, .demo .v-tabsheet-deco {
+	outline: none;
+	text-align: left;
+}
+
+.demo .v-tabsheet-tabs {
+	empty-cells: hide;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.demo .v-tabsheet-tabitemcell:focus {
+	outline: none;
+}
+
+.demo .v-tabsheet-tabitemcell, .demo .v-tabsheet-spacertd {
+	margin: 0;
+	padding: 0;
+	vertical-align: bottom;
+}
+
+.demo .v-tabsheet-spacertd {
+	width: 100%;
+}
+
+.demo .v-tabsheet-spacertd div {
+	border-left: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	height: 1em;
+	padding: 0.2em 0;
+}
+
+.demo .v-tabsheet-hidetabs > .v-tabsheet-tabcontainer {
+	display: none;
+}
+
+.demo .v-tabsheet-scroller {
+	white-space: nowrap;
+	text-align: right;
+	margin-top: -1em;
+}
+
+.demo .v-disabled .v-tabsheet-scroller {
+	display: none;
+}
+
+.demo .v-tabsheet-scrollerPrev, .demo .v-tabsheet-scrollerNext, .demo .v-tabsheet-scrollerPrev-disabled, .demo .v-tabsheet-scrollerNext-disabled {
+	border: 1px solid #aaa;
+	background: #fff;
+	width: 12px;
+	height: 1em;
+	cursor: pointer;
+}
+
+.demo .v-tabsheet-scrollerPrev-disabled, .demo .v-tabsheet-scrollerNext-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.demo .v-tabsheet-tabs .v-caption, .demo .v-tabsheet-tabs .v-caption span {
+	white-space: nowrap;
+}
+
+.demo .v-tabsheet-caption-close {
+	display: inline;
+	display: inline-block;
+	zoom: 1;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	vertical-align: middle;
+	user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.demo .v-tabsheet .v-disabled .v-tabsheet-caption-close {
+	cursor: default;
+	visibility: hidden;
+}
+
+.demo .v-tabsheet-tabitem:hover .v-tabsheet-caption-close {
+	visibility: visible;
+}
+
+.demo .v-tabsheet-tabitem {
+	border: 1px solid #aaa;
+	border-right: none;
+	cursor: pointer;
+	padding: 0.2em 0.5em;
+}
+
+.demo .v-tabsheet-tabitem .v-caption {
+	cursor: inherit;
+}
+
+.demo .v-tabsheet.v-disabled .v-tabsheet-tabitem, .demo .v-tabsheet-tabitemcell-disabled .v-tabsheet-tabitem {
+	cursor: default;
+}
+
+.demo .v-tabsheet-tabitem-selected {
+	cursor: default;
+	border-bottom-color: #fff;
+}
+
+.demo .v-tabsheet-tabitem-selected .v-caption {
+	cursor: default;
+}
+
+.demo .v-tabsheet-tabitem-focus .v-captiontext {
+	text-decoration: underline;
+}
+
+.demo .v-tabsheet-tabitem-selected.v-tabsheet-tabitem-focus .v-captiontext {
+	text-decoration: inherit;
+}
+
+.demo .v-tabsheet-content {
+	border: 1px solid #aaa;
+	border-top: none;
+	border-bottom: none;
+	position: relative;
+}
+
+.demo .v-tabsheet-deco {
+	height: 1px;
+	background: #aaa;
+	overflow: hidden;
+}
+
+.demo .v-tabsheet-hidetabs .v-tabsheet-content {
+	border: none;
+}
+
+.demo .v-tabsheet-hidetabs .v-tabsheet-deco {
+	height: 0;
+}
+
+.demo .v-textfield {
+	text-align: left;
+}
+
+.demo .v-textarea {
+	resize: none;
+	white-space: pre-wrap;
+}
+
+.demo input.v-textfield-prompt, .demo textarea.v-textarea-prompt {
+	color: #999;
+	font-style: italic;
+}
+
+.demo input.v-textfield-readonly, .demo textarea.v-textarea-readonly {
+	background: transparent;
+	border: none;
+	resize: none;
+}
+
+.demo input.v-disabled, .demo textarea.v-disabled {
+	resize: none;
+}
+
+.demo input.v-textfield-readonly:focus, .demo textarea.v-textarea-readonly:focus {
+	outline: none;
+}
+
+.v-sa .demo input:focus, .v-sa .demo textarea:focus {
+	outline-width: medium;
+}
+
+.demo .v-richtextarea {
+	border: 1px solid #aaa;
+	overflow: hidden;
+}
+
+.demo .v-richtextarea .gwt-RichTextArea {
+	background: #fff;
+	border: none;
+}
+
+.demo .v-richtextarea .gwt-HTML {
+	height: 100%;
+	font-size: 13px;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar {
+	white-space: nowrap;
+	background: #959595 url(../base/textfield/img/richtext-toolbar-bg.png) repeat-x 0 -42px;
+	border-bottom: 1px solid #7d7d7d;
+	padding: 2px;
+	overflow: hidden;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar-top {
+	padding-bottom: 1px;
+	overflow: hidden;
+	white-space: normal;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar-bottom {
+	clear: left;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton, .demo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton {
+	float: left;
+	display: inline;
+	width: 22px;
+	height: 21px;
+	overflow: hidden;
+	background: transparent url(../base/textfield/img/richtext-toolbar-bg.png) repeat-x;
+	cursor: pointer;
+	margin-right: 2px;
+	text-align: center;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down, .demo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down, .demo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down-hovering, .demo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down-hovering {
+	background-position: 0 -21px;
+}
+
+.demo .v-richtextarea .gwt-RichTextToolbar .gwt-ListBox {
+	width: 24.5%;
+	margin-right: 2px;
+}
+
+.demo .v-richtextarea-readonly {
+	border: none;
+}
+
+.demo .v-tree {
+	text-align: left;
+	padding: 1px 0;
+	outline: none;
+}
+
+.demo .v-tree-node {
+	background: transparent url(../base/common/img/sprites.png) no-repeat 5px -37px;
+	padding: 1px 0;
+}
+
+.demo .v-tree-node-caption:focus {
+	outline: none;
+}
+
+.demo div.v-tree-node-leaf {
+	background: transparent;
+}
+
+.demo .v-tree-node-expanded {
+	background: transparent url(../base/common/img/sprites.png) no-repeat -5px -10px;
+}
+
+.demo .v-tree-node-caption {
+	margin-left: 1em;
+}
+
+.demo .v-tree-node span {
+	cursor: pointer;
+}
+
+.demo .v-tree-node-caption div {
+	white-space: nowrap;
+}
+
+.demo .v-tree-node-caption span, .demo .v-tree-node-caption .v-icon {
+	vertical-align: middle;
+}
+
+.demo .v-tree-node-selected span {
+	background: #999;
+	color: #fff;
+}
+
+.demo .v-tree-node-children {
+	padding-left: 1em;
+}
+
+.demo .v-tree .v-tree-node-drag-top {
+	border-top: 2px solid #1d9dff;
+	margin-top: -1px;
+	padding-top: 0;
+}
+
+.demo .v-tree .v-tree-node-drag-bottom {
+	border-bottom: 2px solid #1d9dff;
+	margin-bottom: -1px;
+	padding-bottom: 0;
+}
+
+.demo .v-tree .v-tree-node-drag-top:before, .demo .v-tree .v-tree-node-drag-bottom:after, .demo .v-tree .v-tree-node-caption-drag-center:after {
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	margin-top: -4px;
+	background: transparent url(../base/common/img/drag-slot-dot.png);
+}
+
+.demo .v-tree .v-tree-node-drag-bottom:after {
+	margin-top: -2px;
+}
+
+.demo .v-tree .v-tree-node-caption-drag-center:after {
+	margin-left: 14px;
+}
+
+.v-ff .demo .v-tree .v-tree-node-caption-drag-center:after, .v-ie .demo .v-tree .v-tree-node-caption-drag-center:after {
+	margin-top: -2px;
+}
+
+.demo .v-tree .v-tree-node-drag-top {
+	background-position: 5px -38px;
+}
+
+.demo .v-tree .v-tree-node-drag-top.v-tree-node-expanded {
+	background-position: -5px -11px;
+}
+
+.demo .v-tree .v-tree-node-caption-drag-center div {
+	border: 2px solid #1d9dff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: -2px 2px -2px -2px;
+	background-color: #bcdcff;
+}
+
+.demo .v-tree .v-tree-node-caption-drag-center div {
+	background-color: rgba(169, 209, 255, 0.6);
+}
+
+.demo .v-tree .v-tree-node-caption-drag-center div, .demo .v-tree .v-tree-node-drag-top, .demo .v-tree .v-tree-node-drag-bottom {
+	border-color: rgba(0, 109, 232, 0.6);
+}
+
+.demo .v-tree-connectors .v-tree-node-caption {
+	padding-top: 1px;
+}
+
+.demo .v-tree-connectors .v-tree-node {
+	background: transparent url(../base/tree/img/connector-expand.png) no-repeat 2px -52px;
+}
+
+.demo .v-tree-connectors .v-tree-node-expanded {
+	background: transparent url(../base/tree/img/connector-collapse.png) no-repeat 2px -52px;
+}
+
+.demo .v-tree-connectors .v-tree-node-last {
+	background: transparent url(../base/tree/img/connector-expand-last.png) no-repeat 2px -52px;
+}
+
+.demo .v-tree-connectors .v-tree-node-expanded.v-tree-node-last {
+	background: transparent url(../base/tree/img/connector-collapse-last.png) no-repeat 2px -52px;
+}
+
+.demo .v-tree-connectors .v-tree-node-leaf {
+	background: transparent url(../base/tree/img/connector-leaf.png) repeat-y 2px 50%;
+}
+
+.demo .v-tree-connectors .v-tree-node-leaf-last {
+	background: transparent url(../base/tree/img/connector-leaf-last.png) repeat-y 2px 50%;
+}
+
+.demo .v-tree-connectors .v-tree-node-children {
+	background: transparent url(../base/tree/img/connector.png) repeat-y 2px 0;
+}
+
+.demo .v-tree-connectors .v-tree-node-children-last {
+	background: transparent;
+}
+
+.demo .v-tree-connectors .v-tree-node-drag-top, .demo .v-tree-connectors .v-tree-node-expanded.v-tree-node-drag-top {
+	background-position: 2px -53px;
+}
+
+.demo .v-tree-connectors .v-tree-node-drag-top.v-tree-node-leaf {
+	background-position: 2px 50%;
+}
+
+.demo .v-treetable-treespacer {
+	display: inline-block;
+	background: transparent;
+	height: 10px;
+	width: 18px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+
+.demo .v-treetable-node-closed {
+	background: url(../base/treetable/img/arrow-right.png) right top no-repeat;
+}
+
+.demo .v-treetable-node-open {
+	background: url(../base/treetable/img/arrow-down.png) right top no-repeat;
+}
+
+.demo .v-treetable .v-checkbox {
+	display: inline-block;
+	padding-bottom: 4px;
+}
+
+.demo .v-treetable .v-table-row .v-table-cell-content, .demo .v-treetable .v-table-row-odd .v-table-cell-content {
+	z-index: 10;
+}
+
+.demo .v-treetable .v-table-cell-wrapper {
+	position: relative;
+}
+
+.demo .v-treetable .v-table-body .v-table-table .v-table-row-animating {
+	zoom: 1;
+	z-index: 1;
+}
+
+.demo .v-treetable .v-table-body .v-table-table .v-table-row-animating, .demo .v-treetable .v-table-body .v-table-table .v-table-row-animating .v-table-cell-content {
+	background: transparent;
+}
+
+.demo .v-treetable-animation-clone {
+	border-spacing: 0;
+	zoom: 1;
+}
+
+.demo div.v-treetable-animation-clone-wrapper {
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+}
+
+.demo div.v-treetable-animation-clone-wrapper table.v-treetable-animation-clone {
+	background-color: #fff;
+}
+
+.demo div table.v-treetable-animation-clone tr.v-table-row, .demo div table.v-treetable-animation-clone tr.v-table-row-odd, .demo div table.v-treetable-animation-clone tr.v-table-row td.v-table-cell-content, .demo div table.v-treetable-animation-clone tr.v-table-row-odd td.v-table-cell-content {
+	visibility: visible;
+}
+
+.demo .v-upload {
+	white-space: nowrap;
+}
+
+.demo .v-upload-immediate {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+}
+
+.demo .v-upload-immediate .v-button {
+	width: 100%;
+}
+
+.v-ff .demo .v-upload-immediate, .v-op .demo .v-upload-immediate {
+	display: inline-block;
+}
+
+.demo .v-upload-immediate input {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 2;
+	position: absolute;
+	right: 0;
+	height: 21px;
+	text-align: right;
+	border: none;
+	background: transparent;
+}
+
+.demo .v-upload-immediate button {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.demo .v-window {
+	background: #fff;
+}
+
+.demo .v-window-contents {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-window.v-has-width > div.popupContent, .demo .v-window.v-has-width .v-window-wrap, .demo .v-window.v-has-width .v-window-contents, .demo .v-window.v-has-width .v-window-contents > div {
+	width: 100%;
+}
+
+.demo .v-window.v-has-height > div.popupContent, .demo .v-window.v-has-height .v-window-wrap, .demo .v-window.v-has-height .v-window-contents, .demo .v-window.v-has-height .v-window-contents > div {
+	height: 100%;
+}
+
+.demo .v-window-outerheader {
+	padding: 0.3em 1em;
+	height: 1.6em;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.demo .v-window-outerheader, .demo .v-window-draggingCurtain {
+	cursor: move;
+}
+
+.demo .v-window-header {
+	font-weight: bold;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ie-user-select: none;
+	user-select: none;
+}
+
+.demo div.v-window-header {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 0;
+}
+
+.demo .v-window-header .v-icon {
+	vertical-align: middle;
+}
+
+.demo .v-window-contents > div {
+	outline: none;
+}
+
+.demo .v-window-footer {
+	overflow: hidden;
+	zoom: 1;
+	height: 10px;
+	position: relative;
+	cursor: move;
+}
+
+.demo .v-window-resizebox {
+	width: 10px;
+	height: 10px;
+	background: #ddd;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+}
+
+.demo .v-window-resizebox, .demo .v-window-resizingCurtain {
+	cursor: se-resize;
+}
+
+.demo .v-window div.v-window-footer-noresize {
+	height: 0;
+}
+
+.demo .v-window-resizebox-disabled, .demo .v-window-closebox-disabled, .demo .v-window-restorebox-disabled, .demo .v-window-maximizebox-disabled {
+	cursor: default;
+	display: none;
+}
+
+.demo .v-window-closebox, .demo .v-window-restorebox, .demo .v-window-maximizebox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1em;
+	height: 1em;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.demo .v-window-maximizebox, .demo .v-window-restorebox {
+	right: 1.1em;
+}
+
+.demo .v-window-closebox {
+	background: red;
+}
+
+.demo .v-window-maximizebox {
+	background: blue;
+}
+
+.demo .v-window-restorebox {
+	background: yellow;
+}
+
+.demo .v-window-modalitycurtain {
+	top: 0;
+	left: 0;
+	background: #999;
+	opacity: 0.5;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=50);
+}
+
+.demo .v-shadow-window {
+	position: absolute;
+	display: none;
+	pointer-events: none;
+}
+
+.v-ie8 .demo .v-shadow-window {
+	display: block;
+}
+
+.demo .v-shadow-window .top-left {
+	position: absolute;
+	overflow: hidden;
+	top: -10px;
+	left: -15px;
+	width: 28px;
+	height: 28px;
+	background: transparent url(../base/window/img/shadow/top-left.png);
+}
+
+.demo .v-shadow-window .top {
+	position: absolute;
+	overflow: hidden;
+	top: -10px;
+	left: 13px;
+	height: 28px;
+	right: 13px;
+	background: transparent url(../base/window/img/shadow/top.png);
+}
+
+.demo .v-shadow-window .top-right {
+	position: absolute;
+	overflow: hidden;
+	top: -10px;
+	right: -15px;
+	width: 28px;
+	height: 28px;
+	background: transparent url(../base/window/img/shadow/top-right.png);
+}
+
+.demo .v-shadow-window .left {
+	position: absolute;
+	overflow: hidden;
+	top: 18px;
+	left: -15px;
+	width: 28px;
+	bottom: 10px;
+	background: transparent url(../base/window/img/shadow/left.png);
+}
+
+.demo .v-shadow-window .center {
+	position: absolute;
+	overflow: hidden;
+	top: 18px;
+	left: 13px;
+	bottom: 10px;
+	right: 13px;
+	background: transparent url(../base/window/img/shadow/center.png);
+}
+
+.demo .v-shadow-window .right {
+	position: absolute;
+	overflow: hidden;
+	top: 18px;
+	right: -15px;
+	width: 28px;
+	bottom: 10px;
+	background: transparent url(../base/window/img/shadow/right.png);
+}
+
+.demo .v-shadow-window .bottom-left {
+	position: absolute;
+	overflow: hidden;
+	bottom: -18px;
+	left: -15px;
+	width: 28px;
+	height: 28px;
+	background: transparent url(../base/window/img/shadow/bottom-left.png);
+}
+
+.demo .v-shadow-window .bottom {
+	position: absolute;
+	overflow: hidden;
+	bottom: -18px;
+	left: 13px;
+	right: 13px;
+	height: 28px;
+	background: transparent url(../base/window/img/shadow/bottom.png);
+}
+
+.demo .v-shadow-window .bottom-right {
+	position: absolute;
+	overflow: hidden;
+	bottom: -18px;
+	right: -15px;
+	width: 28px;
+	height: 28px;
+	background: transparent url(../base/window/img/shadow/bottom-right.png);
+}
+
+.demo.v-app {
+	background: transparent;
+	overflow: hidden;
+}
+
+.demo .v-ui {
+	margin-top: 0;
+	border-top: none;
+}
+
+.demo .v-tooltip {
+	background: #fdfdee;
+	border: 1px solid #c0c0b9;
+	padding: 1px 5px;
+	color: #222;
+	font-size: 11.7px;
+	line-height: normal;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.v-sa .demo .v-tooltip {
+	outline-color: #000000;
+	outline-color: rgba(0, 0, 0, 0.2);
+	outline: 1px solid;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border: none;
+}
+
+.demo.v-app, .demo .v-window, .demo .v-popupview-popup, .demo .v-tooltip, .demo.v-app input, .demo.v-app select, .demo.v-app button, .demo.v-app textarea, .demo .v-window input, .demo .v-window select, .demo .v-window button, .demo .v-window textarea, .demo .v-popupview-popup input, .demo .v-popupview-popup select, .demo .v-popupview-popup button, .demo .v-popupview-popup textarea, .demo .v-filterselect-suggestpopup, .demo .v-datefield-popup, .demo .v-contextmenu, .demo .v-Notification, .demo .v-menubar-submenu, .demo .v-table-header-drag, .demo .v-drag-element {
+	font-family: Arial, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #222;
+}
+
+.demo .v-window, .demo .v-popupview-popup, .demo .v-filterselect-suggestpopup, .demo .v-datefield-popup, .demo .v-contextmenu, .demo .v-Notification, .demo .v-menubar-submenu {
+	border: 1px solid #adadad;
+	border-color: #000000;
+	border-color: rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	overflow: hidden;
+}
+
+.demo .v-window, .demo .v-popupview-popup, .demo .v-filterselect-suggestpopup, .demo .v-datefield-popup, .demo .v-contextmenu, .demo .v-menubar-submenu {
+	background: #e8e8e8;
+	background: rgba(232, 232, 232, 0.9);
+	background-image: url(../chameleon/img/grad-light-top.png) repeat-x;
+}
+
+.demo .v-filterselect-suggestpopup, .demo .v-contextmenu, .demo .v-menubar-submenu {
+	padding: 3px 0;
+}
+
+.demo .v-contextmenu .gwt-MenuItem, .demo .v-filterselect-suggestpopup .gwt-MenuItem, .demo .v-menubar-submenu .v-menubar-menuitem {
+	padding: 0.05em 0.7em;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: default;
+}
+
+.demo .v-contextmenu td.gwt-MenuItem-selected div, .demo .v-filterselect-suggestpopup td.gwt-MenuItem-selected, .demo .v-table .v-table-body .v-selected, .demo .v-menubar-submenu span.v-menubar-menuitem-selected {
+	text-shadow: none;
+}
+
+.demo .v-contextmenu .gwt-MenuItem-selected, .demo .v-filterselect-suggestpopup .gwt-MenuItem-selected, .demo .v-table .v-selected, .demo .v-menubar-submenu .v-menubar-menuitem-selected {
+	background-color: #333;
+}
+
+.demo .v-contextmenu .gwt-MenuItem-selected div {
+	background: transparent;
+}
+
+.demo .v-tooltip .v-errormessage {
+	color: #b2320b;
+	padding-left: 14px;
+	background: transparent url(../chameleon/img/error-indicator.png) no-repeat 0 50%;
+}
+
+.demo .v-errorindicator {
+	width: 13px;
+	height: 1.4em;
+	background: transparent url(../chameleon/img/error-indicator.png) no-repeat right 50%;
+}
+
+.demo .v-caption-small .v-errorindicator {
+	height: 1.2em;
+}
+
+.demo .v-caption-big .v-errorindicator {
+	height: 1.8em;
+}
+
+.demo .v-accordion {
+	border: 1px solid #b3b3b3;
+}
+
+.demo .v-accordion-item-open {
+	border-bottom: 1px solid #b3b3be;
+}
+
+.demo .v-accordion-item-caption, .demo .v-accordion-item-open .v-accordion-item-caption:active {
+	padding: 0;
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	border-width: 0 0 1px 0;
+	border-style: solid none;
+}
+
+.demo div.v-accordion-item-caption, .demo div.v-accordion-item-open .v-accordion-item-caption:active {
+	background-color: transparent;
+}
+
+.demo .v-accordion-item-caption .v-caption {
+	padding: 0.2em 0.9em;
+}
+
+.demo .v-accordion-item-caption:active {
+	background-image: url(../chameleon/img/grad-dark-bottom.png);
+	background-position: left bottom;
+}
+
+.demo .v-accordion-opaque {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.demo .v-accordion-opaque .v-accordion-item-caption, .demo .v-accordion-opaque .v-accordion-item-open {
+	border: none;
+}
+
+.demo .v-accordion-opaque .v-accordion-item-caption, .demo .v-accordion-opaque .v-accordion-item-open .v-accordion-item-caption:active {
+	background-color: #b8b8b8;
+}
+
+.demo .v-accordion-opaque .v-accordion-item-open {
+	background-color: #fff;
+}
+
+.demo .v-accordion-opaque .v-accordion-item-first, .demo .v-accordion-opaque .v-accordion-item-first .v-accordion-item-caption {
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	overflow: hidden;
+}
+
+.demo .v-accordion-borderless {
+	border: none;
+}
+
+.demo .v-accordion-opaque.borderless, .demo .v-accordion-opaque.borderless .v-accordion-item-first .v-accordion-item-caption {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.demo .v-button:active, .v-ie8 .demo .v-pressed.v-button, .demo div.v-button-down {
+	background-image: url(../chameleon/img/grad-dark-bottom2.png);
+	background-color: #afafaf;
+}
+
+.demo .v-button:active .v-button-wrap, .v-ie8 .demo .v-pressed.v-button .v-button-wrap, .demo .v-button-down .v-button-wrap {
+	background-image: url(../chameleon/img/grad-dark-top2.png);
+	border: 1px solid #888;
+	padding: 3px 12px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo div.v-button-down .v-button-wrap {
+	background-image: url(../chameleon/img/grad-dark-top2.png);
+}
+
+.demo .v-button {
+	overflow: hidden;
+}
+
+.demo .v-button, .demo .v-disabled.v-button:focus, .demo .v-disabled.v-button:active {
+	border: 1px solid #8b8b8b;
+	background: #c9c9c9;
+	border-radius: 3px;
+	background: #c9c9c9 url(../chameleon/img/grad-dark-bottom.png) repeat-x left bottom;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+	text-shadow: 0 1px 0 #fff;
+	padding: 0;
+}
+
+.demo .v-button-wrap, .demo .v-disabled:active .v-button-wrap {
+	display: block;
+	padding: 4px 13px;
+	border: none;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	height: 100%;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+
+.v-sa .demo .v-button, .v-sa .demo .v-button-wrap, .v-ff .demo .v-button, .v-ff .demo .v-button-wrap {
+	overflow: hidden;
+}
+
+.demo .v-button:focus {
+	outline: none;
+}
+
+.demo .v-button .v-icon {
+	margin-left: -0.5em;
+}
+
+.demo .v-button .v-button-caption {
+	line-height: 1.26;
+}
+
+.demo .v-button-big {
+	font-size: 15.6px;
+}
+
+.demo .v-button-small {
+	font-size: 11.05px;
+	font-weight: normal;
+}
+
+.demo .v-button-small .v-button-wrap {
+	padding: 3px 11px;
+}
+
+.demo .v-button-small:active .v-button-wrap, .v-ie8 .demo .v-button-small.v-pressed .v-button-wrap, .demo .v-button-down.small .v-button-wrap {
+	padding: 2px 10px;
+}
+
+.demo .v-button-small .v-icon {
+	margin-top: -4px;
+	margin-bottom: -4px;
+}
+
+.demo .v-button-wide .v-button-wrap {
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.demo .v-button-wide:active .v-button-wrap, .v-ie8 .demo .v-button-wide.v-pressed .v-button-wrap {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.demo .v-button-tall .v-button-wrap {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.demo .v-button-tall:active .v-button-wrap, .v-ie8 .demo .v-button-tall.v-pressed .v-button-wrap {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.demo .v-button-default, .demo .v-disabled.v-button-default:focus {
+	font-weight: bold;
+}
+
+.demo div.v-button-link, .demo div.v-button-link:focus, .demo .v-button-link:active, .demo div.v-disabled.v-button-link, .demo div.v-disabled.v-button-link:focus, body.v-ie .demo .v-pressed.v-button-link, .demo div.v-button-borderless, .demo div.v-button-borderless:focus, .demo .v-button-borderless:active, .demo div.v-disabled.v-button-borderless, .demo div.v-disabled.v-button-borderless:focus, body.v-ie .demo .v-pressed.v-button-borderless {
+	background: transparent;
+	font-weight: normal;
+	text-shadow: none;
+	border: none;
+	margin: 1px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+.demo .v-button-link .v-button-wrap, .demo .v-button-borderless .v-button-wrap {
+	display: inline;
+}
+
+.demo div.v-button-link .v-button-wrap, .demo div.v-button-link:focus .v-button-wrap, .demo .v-button-link:active .v-button-wrap, .demo div.v-disabled.v-button-link .v-button-wrap, .demo div.v-disabled.v-button-link:focus .v-button-wrap, body.v-ie .demo .v-pressed.v-button-link .v-button-wrap, .demo div.v-button-borderless .v-button-wrap, .demo div.v-button-borderless:focus .v-button-wrap, .demo .v-button-borderless:active .v-button-wrap, .demo div.v-disabled.v-button-borderless .v-button-wrap, .demo div.v-disabled.v-button-borderless:focus .v-button-wrap, body.v-ie .demo .v-pressed.v-button-borderless .v-button-wrap {
+	background: transparent;
+	font-weight: normal;
+	text-shadow: none;
+	border: none;
+	padding: 1px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+.demo .v-button-link:focus .v-button-caption, .demo .v-button-borderless:focus .v-button-caption {
+	border: 1px dotted gray;
+	margin: -1px;
+}
+
+.demo .v-button-link:active .v-button-caption, .demo .v-button-borderless:active .v-button-caption {
+	border: none;
+	margin: 0;
+}
+
+.demo .v-button-borderless:active .v-icon {
+	opacity: 0.6;
+}
+
+.demo .v-button-link .v-icon, .demo .v-button-borderless .v-icon {
+	margin-left: 0;
+}
+
+.demo .v-button-icon-on-top.v-button-borderless:focus .v-button-caption {
+	margin-top: 1px;
+}
+
+.demo .v-button-icon-on-top .v-button-caption, .demo .v-button-icon-on-top:focus .v-button-caption, .demo .v-button-icon-on-top.v-button-borderless:active .v-button-caption {
+	display: block;
+	margin-top: 2px;
+}
+
+.demo .v-button-icon-on-top .v-icon {
+	margin: 0;
+}
+
+.demo .v-button-icon-on-right .v-icon {
+	float: right;
+	margin-left: 3px;
+	margin-right: -0.5em;
+}
+
+.demo .v-button-icon-only .v-button-caption {
+	display: none;
+}
+
+.demo .v-button-icon-only .v-icon {
+	margin-right: -0.5em;
+}
+
+.demo .v-colorpicker-button-color {
+	border: 1px solid #8B8B8B;
+}
+
+.demo .v-colorpicker-popup {
+	width: 248px;
+}
+
+.demo .v-colorpicker-popup .v-tabsheet .v-colorpicker-grid {
+	height: 308px;
+}
+
+.demo .v-grid-sidebar.v-contextmenu .v-on:before, .demo .v-grid-sidebar.v-contextmenu .v-off:before {
+	content: none;
+	font-size: 0;
+	margin-right: 0;
+}
+
+.demo .v-label-h1, .demo .v-label h1, .demo .v-label-h2, .demo .v-label h2, .demo .v-label-h3, .demo .v-label h3, .demo .v-label-h4, .demo .v-label h4 {
+	margin: 0;
+	font-weight: bold;
+}
+
+.demo .v-label-h1, .demo .v-label h1 {
+	padding: 0.75em 0 0.5em 0;
+	font-size: 24.05px;
+}
+
+.demo .v-label-h2, .demo .v-label h2 {
+	padding: 0.67em 0 0.33em 0;
+	font-size: 18.2px;
+}
+
+.demo .v-label-h3, .demo .v-label h3 {
+	margin: 0.71em 0 0.29em 0;
+	font-size: 14.3px;
+}
+
+.demo .v-label-h4, .demo .v-label h4 {
+	padding: 0.23em 0;
+	font-size: 13px;
+}
+
+.demo .v-label-big {
+	font-size: 15.6px;
+}
+
+.demo .v-label-small {
+	font-size: 11.7px;
+	line-height: 1.3;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+.demo .v-label-tiny {
+	font-size: 11.05px;
+	line-height: 1.2;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+.demo.v-app .v-label-warning, .demo.v-app .v-label-error {
+	color: #574734;
+	background: #fffec8 url(../chameleon/img/label-warning-icon.png) no-repeat 0.2em 50%;
+	white-space: nowrap;
+	padding: 0.3em 1em 0.3em 2.4em;
+	overflow: hidden;
+	width: auto !important;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	text-shadow: none;
+}
+
+.demo.v-app .v-label-error {
+	color: #fff;
+	font-weight: bold;
+	background: #c22f24 url(../chameleon/img/label-error-icon.png) no-repeat 0.2em 50%;
+	text-shadow: 0 1px 0 #8f2e27;
+}
+
+.demo .v-label-big.v-label-warning, .demo .v-label-big.v-label-error {
+	background-image: url(../chameleon/img/label-warning-icon-big.png);
+	background-position: 0 50%;
+	padding: 0.5em 1em 0.5em 3em;
+}
+
+.demo .v-label-big.v-label-error {
+	background-image: url(../chameleon/img/label-error-icon-big.png);
+}
+
+.demo.v-app .v-label-loading {
+	height: 32px;
+	line-height: 32px;
+	background-image: url(../base/common/img/loading-indicator.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	white-space: nowrap;
+	padding: 0.3em 1em 0.3em 36px;
+	overflow: hidden;
+	width: auto !important;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-menubar {
+	padding: 0 0.4em;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x;
+	border: 1px solid #b3b3b3;
+	border-width: 1px 0;
+}
+
+.demo .v-menubar .v-menubar-menuitem {
+	padding: 0.2em 0.5em;
+	line-height: normal;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem {
+	padding-right: 1.5em;
+}
+
+.demo .v-menubar-submenu .v-menubar-submenu-indicator {
+	margin-top: 0.1em;
+	font-size: 11.7px;
+}
+
+.demo .v-menubar-submenu .v-menubar-menuitem-selected {
+	background-image: url(../chameleon/img/grad-light-top2.png);
+	background-position: 0 -1px;
+}
+
+.demo .v-menubar-popup {
+	border-radius: 5px;
+}
+
+.demo div.v-Notification {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	font-size: 16px;
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	background: white url(../chameleon/img/grad-light-top.png) repeat-x;
+	background: rgba(255, 255, 255, 0.9) url(../chameleon/img/grad-light-top.png) repeat-x;
+}
+
+.demo .v-Notification-description {
+	line-height: 1.3;
+}
+
+.demo div.v-Notification-warning {
+	background-color: #fffec8;
+	color: #574734;
+	border: 2px solid #fee3af;
+}
+
+.demo div.v-Notification-warning .v-Notification-caption {
+	padding-left: 44px;
+	background: transparent url(../chameleon/img/label-warning-icon-big.png) no-repeat 0 50%;
+}
+
+.demo div.v-Notification-error {
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	background: #c22f24 url(../chameleon/img/error-close.png) no-repeat right top;
+	border: 2px solid #ca3030;
+}
+
+.demo div.v-Notification-error .v-Notification-caption {
+	padding-left: 44px;
+	background: transparent url(../chameleon/img/label-error-icon-big.png) no-repeat 0 50%;
+}
+
+.demo div.v-Notification-tray {
+	color: #fff;
+	margin: 0 5px 5px 0;
+	background: #3b3b3b url(../chameleon/img/grad-light-top2.png) repeat-x;
+	border: 1px solid #5b5b5b;
+	padding: 0.8em 0.9em;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.demo .v-Notification-tray .v-Notification-caption {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.demo .v-Notification-tray .v-Notification-description {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.demo div.v-Notification-system {
+	color: #fff;
+	border: none;
+	background-color: #b40000;
+}
+
+.demo .v-panel-caption {
+	background: #b9dcff;
+	font-size: 15.6px;
+	border: 1px solid #b3b3b3;
+	border-bottom: none;
+	padding: 0.2em 0.6em;
+}
+
+.demo .v-panel-nocaption {
+	padding: 0;
+	height: 0;
+	overflow: hidden;
+	border-top: 1px solid #b3b3b3;
+}
+
+.demo .v-panel-content {
+	background: #fff;
+	border: 1px solid #b3b3b3;
+	border-top: none;
+	border-bottom: none;
+}
+
+.demo .v-panel-deco {
+	height: 0;
+	overflow: hidden;
+	border-top: 1px solid #b3b3b3;
+}
+
+.demo div.v-panel-caption-borderless {
+	border: none;
+}
+
+.demo div.v-panel-nocaption-borderless, .demo div.v-panel-content-borderless, .demo div.v-panel-deco-borderless {
+	border: none;
+	background: transparent;
+}
+
+.demo .v-panel-light .v-panel-caption-light {
+	background: transparent;
+	font-weight: normal;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+.demo div.v-panel-content-light {
+	background: transparent;
+}
+
+.demo .v-panel-bubble .v-panel-captionwrap {
+	border: 1px solid #b3b3b3;
+	border-bottom: none;
+	background: #fff;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	padding: 1px 2px;
+	overflow: hidden;
+}
+
+.demo .v-panel-bubble .v-panel-caption-bubble {
+	border: none;
+	background-image: url(../chameleon/img/grad-light-top.png);
+	background-repeat: repeat-x;
+	background-position: 0 -1px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	margin: 1px 0;
+	font-size: 13px;
+	line-height: 1.2;
+	padding: 0.3em 0.6em;
+}
+
+.demo .v-panel-nocaption-bubble {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.demo .v-panel-deco-bubble {
+	height: 2px;
+	border: 1px solid #b3b3b3;
+	border-top: none;
+	background: #fff;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+}
+
+.demo div.v-panel-borderless .v-panel-captionwrap, .demo div.v-panel-borderless .v-panel-deco-bubble {
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+
+.demo div.v-panel-borderless .v-panel-content-bubble {
+	background: transparent;
+}
+
+.demo .v-popupview-popup {
+	padding: 0.3em 0.4em;
+}
+
+.demo .v-progressbar-wrapper {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: #eee url(../chameleon/img/grad-dark-bottom.png) repeat-x left bottom;
+	overflow: visible;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.demo .v-progressbar-indicator {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -10px;
+	margin: -1px;
+	height: 7px;
+	border: 1px solid #b3b3b3;
+}
+
+.demo .v-progressbar-small {
+	width: 110px;
+}
+
+.demo .v-progressbar-small .v-progressbar-wrapper, .demo .v-progressbar-small .v-progressbar-indicator {
+	height: 2px;
+	border-radius: 1px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+.demo .v-progressbar-big {
+	width: 250px;
+}
+
+.demo .v-progressbar-big .v-progressbar-wrapper, .demo .v-progressbar-big .v-progressbar-indicator {
+	height: 14px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.demo .v-progressbar-indeterminate.v-progressbar-big {
+	width: 42px;
+	height: 42px;
+	background: #fff url(../base/common/img/ajax-loader-big.gif) no-repeat 50%;
+}
+
+.demo .v-progressbar-indeterminate.v-disabled {
+	display: none;
+}
+
+.demo .v-progressbar-indeterminate.v-progressbar-bar {
+	display: block;
+	width: 150px;
+	height: 9px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-progressbar-indeterminate.bar.v-progressbar-small {
+	width: 110px;
+	height: 4px;
+}
+
+.demo .v-progressbar-indeterminate.bar.v-progressbar-big {
+	width: 200px;
+	height: 16px;
+}
+
+.demo .v-progressbar-indeterminate.bar .v-progressbar-wrapper {
+	display: block;
+	background: #fff url(../chameleon/img/indeterminate-progress.gif);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	overflow: hidden;
+}
+
+.demo .v-progressbar-indeterminate.bar .v-progressbar-indicator {
+	display: block;
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	border: none;
+	margin: 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	overflow: hidden;
+}
+
+.demo .v-progressbar-indeterminate.bar.v-progressbar-small .v-progressbar-indicator {
+	background: transparent;
+}
+
+.demo .v-progressbar-indeterminate.bar.v-disabled .v-progressbar-indicator {
+	background: #fff;
+}
+
+.demo .v-progressindicator-wrapper {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: #eee url(../chameleon/img/grad-dark-bottom.png) repeat-x left bottom;
+	overflow: visible;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.demo .v-progressindicator-indicator {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -10px;
+	margin: -1px;
+	height: 7px;
+	border: 1px solid #b3b3b3;
+}
+
+.demo .v-progressindicator-small {
+	width: 110px;
+}
+
+.demo .v-progressindicator-small .v-progressindicator-wrapper, .demo .v-progressindicator-small .v-progressindicator-indicator {
+	height: 2px;
+	border-radius: 1px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+.demo .v-progressindicator-big {
+	width: 250px;
+}
+
+.demo .v-progressindicator-big .v-progressindicator-wrapper, .demo .v-progressindicator-big .v-progressindicator-indicator {
+	height: 14px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.demo .v-progressindicator-indeterminate.v-progressindicator-big {
+	width: 42px;
+	height: 42px;
+	background: #fff url(../base/common/img/ajax-loader-big.gif) no-repeat 50%;
+}
+
+.demo .v-progressindicator-indeterminate.v-disabled {
+	display: none;
+}
+
+.demo .v-progressindicator-indeterminate.v-progressindicator-bar {
+	display: block;
+	width: 150px;
+	height: 9px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-progressindicator-indeterminate.bar.v-progressindicator-small {
+	width: 110px;
+	height: 4px;
+}
+
+.demo .v-progressindicator-indeterminate.bar.v-progressindicator-big {
+	width: 200px;
+	height: 16px;
+}
+
+.demo .v-progressindicator-indeterminate.bar .v-progressindicator-wrapper {
+	display: block;
+	background: #fff url(../chameleon/img/indeterminate-progress.gif);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	overflow: hidden;
+}
+
+.demo .v-progressindicator-indeterminate.bar .v-progressindicator-indicator {
+	display: block;
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	border: none;
+	margin: 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	overflow: hidden;
+}
+
+.demo .v-progressindicator-indeterminate.bar.v-progressindicator-small .v-progressindicator-indicator {
+	background: transparent;
+}
+
+.demo .v-progressindicator-indeterminate.bar.v-disabled .v-progressindicator-indicator {
+	background: #fff;
+}
+
+.demo .v-slider {
+	border-top: 1px solid #9a9c9e;
+	border-bottom: 1px solid #bdbfc1;
+	margin: 3px 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.demo .v-slider-base {
+	height: 4px;
+	background: #e0e2e2 url(../chameleon/img/grad-dark-top2.png) repeat-x;
+	border-top: 1px solid #adb0b1;
+	border-left: 1px solid #a0a3a6;
+	border-right: 1px solid #a0a3a6;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-slider-handle {
+	background: #c9c9c9 url(../chameleon/img/grad-dark-bottom2.png) repeat-x left bottom;
+	border: 1px solid #b3b3b3;
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.demo .v-slider-handle-active {
+	background-color: #afafaf;
+}
+
+.demo .v-slider-vertical {
+	width: auto;
+	margin: 0 4px;
+	border-width: 0 1px;
+}
+
+.demo .v-slider-vertical .v-slider-base {
+	background-image: none;
+	width: 4px;
+	border-width: 1px 1px 0;
+}
+
+.demo .v-slider-vertical .v-slider-handle {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	margin-left: -5px;
+}
+
+.demo .v-splitpanel-hsplitter div, .demo .v-splitpanel-vsplitter div {
+	background: transparent url(../chameleon/img/split-handle.png) no-repeat 2px 50%;
+	margin: 0 -1px;
+	width: 9px;
+}
+
+.demo .v-splitpanel-vsplitter div {
+	background-position: 50% 2px;
+	margin: -1px 0;
+	width: auto;
+	height: 9px;
+}
+
+.demo .v-splitpanel-hsplitter, .demo .v-splitpanel-hsplitter-locked {
+	border-style: solid;
+	border-width: 0 1px;
+	border-color: #b0b0b0;
+	width: 7px;
+	background: #b3b3b3 url(../chameleon/img/grad-light-left.png) repeat-y;
+}
+
+.demo .v-splitpanel-vsplitter, .demo .v-splitpanel-vsplitter-locked {
+	border-style: solid;
+	border-width: 1px 0;
+	border-color: #b0b0b0;
+	height: 7px;
+	background: #b3b3b3 url(../chameleon/img/grad-light-top.png) repeat-x;
+}
+
+.demo.v-app .v-splitpanel-hsplitter-small, .demo.v-app .v-splitpanel-hsplitter-small-locked {
+	width: 1px;
+	border: none;
+	background-image: none;
+}
+
+.demo.v-app .v-splitpanel-vsplitter-small, .demo.v-app .v-splitpanel-vsplitter-small-locked {
+	height: 1px;
+	border: none;
+	background-image: none;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.demo .v-splitpanel-hsplitter-small div {
+	width: 7px;
+	margin-left: -2px;
+	background: transparent;
+}
+
+.demo .v-splitpanel-vsplitter-small div {
+	height: 7px;
+	margin-top: -2px;
+	background: transparent;
+	overflow: hidden;
+}
+
+.demo .v-table-table {
+	line-height: 1.4;
+}
+
+.demo .v-table-header-wrap, .demo .v-table-header-drag {
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x;
+	height: 1.4em;
+	line-height: normal;
+}
+
+.demo .v-table-caption-container, .demo .v-table-header-drag {
+	padding-top: 0.2em;
+	padding-right: 4px;
+}
+
+.demo .v-table-header-drag {
+	padding-left: 0.3em;
+}
+
+.demo .v-table-resizer {
+	background: transparent;
+	border-right: 1px solid #b3b3b3;
+	padding-left: 1px;
+	height: 1.4em;
+}
+
+.demo div.v-table-focus-slot-left {
+	background: transparent;
+	border-left: 2px solid #b3b3b3;
+	border-right: none;
+	padding-left: 0;
+	padding-right: 1px;
+	float: left;
+	margin: 0;
+}
+
+.demo .v-table-row, .demo .v-table-row-odd {
+	background: transparent;
+}
+
+.demo .v-table-generated-row {
+	background: #c9c9c9;
+}
+
+.demo .v-table tr.v-selected {
+	background-image: url(../chameleon/img/grad-light-top2.png);
+	background-position: 0 -1px;
+}
+
+.demo div.v-table-focus-slot-right {
+	background: transparent;
+	border-right: 2px solid #b3b3b3;
+	padding-left: 0;
+	margin: 0;
+}
+
+.demo .v-table-column-selector {
+	margin-top: -1.35em;
+}
+
+.demo .v-table-cell-content {
+	border-right: none;
+	padding-right: 7px;
+}
+
+.demo .v-table-caption-container .v-icon {
+	vertical-align: middle;
+	margin: -0.37em 2px 0 0;
+}
+
+.demo .v-table-header-drag .v-icon {
+	vertical-align: middle;
+}
+
+.demo .v-contextmenu .v-on, .demo .v-contextmenu .v-off {
+	display: block;
+	background: transparent url(../chameleon/icons/bullet.png) no-repeat 0 4px;
+	padding-left: 12px;
+}
+
+.demo .v-contextmenu .v-off {
+	background-image: none;
+	color: #666;
+}
+
+.demo .v-contextmenu .gwt-MenuItem-selected .v-on {
+	background-image: url(../chameleon/icons/bullet-white.png);
+}
+
+.demo .v-table-scrollposition {
+	font-size: 11.7px;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.demo .v-table-small .v-table-caption-container, .demo .v-table-small .v-table-body {
+	font-size: 11.05px;
+}
+
+.demo .v-table-small .v-table-resizer, .demo .v-table-small .v-table-header-wrap {
+	height: 1.2em;
+}
+
+.demo .v-table-small .v-table-column-selector {
+	margin-top: -1.2em;
+}
+
+.demo .v-table-big .v-table-caption-container, .demo .v-table-big .v-table-body {
+	font-size: 15.6px;
+}
+
+.demo .v-table-big .v-table-caption-container {
+	padding-top: 0.3em;
+}
+
+.demo .v-table-big .v-table-resizer, .demo .v-table-big .v-table-header-wrap {
+	height: 1.8em;
+}
+
+.demo .v-table-big .v-table-column-selector {
+	margin-top: -1.5em;
+}
+
+.demo .v-table-striped .v-table-row-odd {
+	background-color: #e6e6e6;
+}
+
+.demo .v-table-strong .v-table-caption-container {
+	font-weight: bold;
+}
+
+.demo .v-table-borderless .v-table-header-wrap, .demo .v-table-borderless .v-table-body {
+	border: none;
+}
+
+.demo div.v-table-borderless .v-table-body {
+	background: transparent;
+}
+
+.demo input.v-textfield, .demo textarea.v-textarea, .demo .v-filterselect {
+	line-height: normal;
+	border: 1px solid #b3b3b3;
+	border-top-color: #808080;
+	border-color: rgba(0, 0, 0, 0.3);
+	border-top-color: rgba(0, 0, 0, 0.5);
+	background: #fff url(../chameleon/img/input-bg.png) repeat-x;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+	margin: 0;
+}
+
+.demo input.v-textfield[type="text"], .demo textarea.v-textarea, .demo .v-filterselect {
+	padding-bottom: 0.1em;
+	padding-top: 0.1em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.demo input.v-textfield[type="text"] {
+	height: 1.2em;
+}
+
+.demo input.v-widget.v-textfield[type="text"], .demo .v-filterselect {
+	height: 1.7em;
+}
+
+.demo.v-app input.v-textfield, .demo.v-app textarea.v-textarea, .demo.v-app input.v-filterselect-input {
+	color: #222;
+}
+
+.v-ie .demo input.v-textfield, .v-ie .demo textarea.v-textarea, .v-ie .demo .v-filterselect {
+	border-top-color: #808080;
+}
+
+.demo.v-app input.v-textfield-prompt, .demo.v-app textarea.v-textarea-prompt {
+	font-style: normal;
+	color: #999;
+}
+
+.demo input.v-textfield-focus, .demo textarea.v-textarea-focus {
+	background-color: #fffce1;
+}
+
+.demo input.v-textfield-readonly, .demo textarea.v-textarea-readonly {
+	border: none;
+	background: transparent;
+}
+
+.demo.v-app input.v-textfield-small, .demo.v-app textarea.v-textarea-small, .demo .v-filterselect-small .v-filterselect-input {
+	font-size: 11.05px;
+}
+
+.demo.v-app input.v-textfield-big, .demo.v-app textarea.v-textarea-big, .demo .v-filterselect-big .v-filterselect-input {
+	font-size: 15.6px;
+}
+
+.demo input.v-textfield-big[type=text], .demo .v-datefield-big input.v-datefield-textfield[type=text] {
+	padding: 0.3em;
+}
+
+.demo textarea.v-textarea, .demo .v-filterselect-big {
+	padding: 0.3em;
+}
+
+.demo input.v-textfield-big.v-textfield-search, .demo .v-filterselect-search.v-filterselect-big {
+	background-image: url(../chameleon/img/magnifier-big.png);
+	background-repeat: no-repeat;
+	background-position: 4px 50%;
+}
+
+.demo input.v-textfield-big.v-textfield-search[type=text] {
+	padding-left: 26px;
+}
+
+.demo .v-filterselect-search.v-filterselect-big {
+	padding-left: 26px;
+}
+
+.demo input.v-textfield-search, .demo .v-filterselect-search {
+	background-image: url(../chameleon/img/magnifier.png);
+	background-repeat: no-repeat;
+	background-position: 3px 50%;
+}
+
+.demo input.v-textfield-search[type=text], .demo .v-filterselect-search {
+	padding-left: 17px;
+}
+
+.demo .v-datefield-button {
+	background: #dadada url(../chameleon/img/date-btn.png) repeat-x 50% 0;
+	border: 1px solid gray;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	width: 25px;
+	margin-right: -25px;
+	height: 1.7em;
+	padding: 0.2em 0;
+}
+
+.demo input.v-datefield-textfield[type="text"] {
+	border-right: none;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	height: 1.7em;
+}
+
+.demo .v-datefield-big .v-datefield-button {
+	padding: 0.3em 0;
+	height: 1.9em;
+	width: 32px;
+	background-image: url(../chameleon/img/date-btn-big.png);
+	font-size: 15.6px;
+}
+
+.demo .v-datefield-big input.v-datefield-textfield[type="text"] {
+	height: 1.9em;
+	font-size: 15.6px;
+}
+
+.demo .v-datefield-small .v-datefield-button {
+	height: 1.6em;
+	width: 19px;
+	background-position: 50% -2px;
+	font-size: 11.05px;
+}
+
+.demo .v-datefield-small input.v-datefield-textfield[type="text"] {
+	height: 1.6em;
+	font-size: 11.05px;
+}
+
+.demo .v-datefield-calendarpanel {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	height: auto !important;
+	font-size: 11.7px;
+}
+
+.demo .v-datefield-month .v-datefield-textfield {
+	width: 6.4em;
+}
+
+.demo .v-datefield-year .v-datefield-textfield {
+	width: 4.4em;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel-prevmonth, .demo .v-datefield-year .v-datefield-calendarpanel-nextmonth {
+	display: none;
+}
+
+.demo .v-datefield-calendarpanel-header td {
+	border-bottom: 1px solid #666;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel-header td, .demo .v-datefield-month .v-datefield-calendarpanel-header td {
+	border-bottom: none;
+}
+
+.demo td.v-datefield-calendarpanel-month {
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -1px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.demo span.v-datefield-calendarpanel-month {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	line-height: 2em;
+	height: 1.8em;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel-month {
+	width: 5.4em;
+}
+
+.demo .v-datefield-month .v-datefield-calendarpanel-month, .demo .v-datefield-day .v-datefield-calendarpanel-month, .demo .v-datefield-full .v-datefield-calendarpanel-month {
+	width: 9.4em;
+}
+
+.demo .v-datefield-popupcalendar {
+	min-width: 0;
+	padding-right: 25px;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel {
+	width: 8.4em;
+}
+
+.demo td.v-datefield-calendarpanel-prevyear {
+	text-align: right;
+}
+
+.demo td.v-datefield-calendarpanel-nextyear {
+	text-align: left;
+}
+
+.demo .v-datefield-calendarpanel-header button {
+	font-size: 13px;
+	line-height: normal;
+	width: 100%;
+	padding: 0 0.8em;
+	height: 1.8em;
+	border: none;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -1px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+}
+
+.demo .v-datefield-popup .v-datefield-calendarpanel-month, .demo .v-datefield-popup .v-datefield-calendarpanel-header button {
+	background-position: 0 0;
+}
+
+.demo .v-datefield-calendarpanel-header button:active {
+	background-image: url(../chameleon/img/grad-dark-top2.png);
+}
+
+.demo .v-datefield-calendarpanel-prevyear button {
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+}
+
+.demo .v-datefield-calendarpanel-nextyear button {
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel-prevyear button, .demo .v-datefield-month .v-datefield-calendarpanel-prevyear button {
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.demo .v-datefield-year .v-datefield-calendarpanel-nextyear button, .demo .v-datefield-month .v-datefield-calendarpanel-nextyear button {
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+
+.demo .v-datefield-calendarpanel-body, .demo .v-datefield-calendarpanel-time {
+	text-align: center;
+	vertical-align: top;
+}
+
+.demo .v-datefield-calendarpanel-body table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.demo .v-datefield-calendarpanel-weekdays td {
+	width: 14.2%;
+	overflow: hidden;
+	line-height: normal;
+	text-transform: uppercase;
+	vertical-align: top;
+}
+
+.demo .v-datefield-calendarpanel-weeknumbers td {
+	width: 12.5%;
+}
+
+.demo .v-datefield-calendarpanel-weekdays strong {
+	display: block;
+	text-align: right;
+	font-size: 10.4px;
+	padding: 0.3em 0.5em 0.35em 0;
+	height: 1.1em;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	background: #c9c9c9 url(../chameleon/img/grad-dark-top2.png) repeat-x;
+	margin-bottom: 2px;
+}
+
+.demo .v-datefield-calendarpanel .v-first strong {
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.demo .v-datefield-calendarpanel .v-last strong {
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+
+.demo .v-datefield-popup .v-datefield-calendarpanel .v-first strong, .demo .v-datefield-popup .v-datefield-calendarpanel .v-last strong {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.demo .v-datefield-calendarpanel-body td {
+	text-align: right;
+	height: 1.6em;
+}
+
+.demo .v-datefield-calendarpanel-weeknumber {
+	padding: 0.5em 0.5em 0.35em 0;
+	font-size: 11.7px;
+}
+
+.demo .v-datefield-calendarpanel-day, .demo .v-datefield-calendarpanel-day-today {
+	padding: 0.15em 0.5em 0.15em 0;
+	display: block;
+	margin: 1px 1px 1px 0.3em;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-datefield-calendarpanel-day-focused, .demo .v-datefield-calendarpanel-day:hover {
+	margin: 0 0 0 0.2em;
+	border: 1px solid #b3b3b3;
+	outline: none;
+}
+
+.demo .v-datefield-calendarpanel-day-today {
+	border: none;
+	background: transparent url(../chameleon/img/grad-dark-top2.png) repeat-x;
+	margin: 0 0 0 0.2em;
+	font-weight: bold;
+	border: 1px solid #c9c9c9;
+}
+
+.demo .v-datefield-calendarpanel-day-selected, .demo .v-datefield-calendarpanel-day-selected:hover {
+	margin: 0 0 0 0.3em;
+	border: none;
+}
+
+.demo .v-datefield-calendarpanel-time select {
+	padding: 0;
+	font-size: 11.7px;
+	margin: 0;
+}
+
+.demo .v-inline-datefield-button {
+	background: #dadada url(../chameleon/img/date-btn.png) repeat-x 50% 0;
+	border: 1px solid gray;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	width: 25px;
+	margin-right: -25px;
+	height: 1.7em;
+	padding: 0.2em 0;
+}
+
+.demo input.v-inline-datefield-textfield[type="text"] {
+	border-right: none;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	height: 1.7em;
+}
+
+.demo .v-inline-datefield-big .v-inline-datefield-button {
+	padding: 0.3em 0;
+	height: 1.9em;
+	width: 32px;
+	background-image: url(../chameleon/img/date-btn-big.png);
+	font-size: 15.6px;
+}
+
+.demo .v-inline-datefield-big input.v-inline-datefield-textfield[type="text"] {
+	height: 1.9em;
+	font-size: 15.6px;
+}
+
+.demo .v-inline-datefield-small .v-inline-datefield-button {
+	height: 1.6em;
+	width: 19px;
+	background-position: 50% -2px;
+	font-size: 11.05px;
+}
+
+.demo .v-inline-datefield-small input.v-inline-datefield-textfield[type="text"] {
+	height: 1.6em;
+	font-size: 11.05px;
+}
+
+.demo .v-inline-datefield-calendarpanel {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	height: auto !important;
+	font-size: 11.7px;
+}
+
+.demo .v-inline-datefield-month .v-inline-datefield-textfield {
+	width: 6.4em;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-textfield {
+	width: 4.4em;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-prevmonth, .demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-nextmonth {
+	display: none;
+}
+
+.demo .v-inline-datefield-calendarpanel-header td {
+	border-bottom: 1px solid #666;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-header td, .demo .v-inline-datefield-month .v-inline-datefield-calendarpanel-header td {
+	border-bottom: none;
+}
+
+.demo td.v-inline-datefield-calendarpanel-month {
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -1px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.demo span.v-inline-datefield-calendarpanel-month {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	line-height: 2em;
+	height: 1.8em;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-month {
+	width: 5.4em;
+}
+
+.demo .v-inline-datefield-month .v-inline-datefield-calendarpanel-month, .demo .v-inline-datefield-day .v-inline-datefield-calendarpanel-month, .demo .v-inline-datefield-full .v-inline-datefield-calendarpanel-month {
+	width: 9.4em;
+}
+
+.demo .v-inline-datefield-popupcalendar {
+	min-width: 0;
+	padding-right: 25px;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel {
+	width: 8.4em;
+}
+
+.demo td.v-inline-datefield-calendarpanel-prevyear {
+	text-align: right;
+}
+
+.demo td.v-inline-datefield-calendarpanel-nextyear {
+	text-align: left;
+}
+
+.demo .v-inline-datefield-calendarpanel-header button {
+	font-size: 13px;
+	line-height: normal;
+	width: 100%;
+	padding: 0 0.8em;
+	height: 1.8em;
+	border: none;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x 0 -1px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+}
+
+.demo .v-inline-datefield-popup .v-inline-datefield-calendarpanel-month, .demo .v-inline-datefield-popup .v-inline-datefield-calendarpanel-header button {
+	background-position: 0 0;
+}
+
+.demo .v-inline-datefield-calendarpanel-header button:active {
+	background-image: url(../chameleon/img/grad-dark-top2.png);
+}
+
+.demo .v-inline-datefield-calendarpanel-prevyear button {
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+}
+
+.demo .v-inline-datefield-calendarpanel-nextyear button {
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-prevyear button, .demo .v-inline-datefield-month .v-inline-datefield-calendarpanel-prevyear button {
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.demo .v-inline-datefield-year .v-inline-datefield-calendarpanel-nextyear button, .demo .v-inline-datefield-month .v-inline-datefield-calendarpanel-nextyear button {
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+
+.demo .v-inline-datefield-calendarpanel-body, .demo .v-inline-datefield-calendarpanel-time {
+	text-align: center;
+	vertical-align: top;
+}
+
+.demo .v-inline-datefield-calendarpanel-body table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.demo .v-inline-datefield-calendarpanel-weekdays td {
+	width: 14.2%;
+	overflow: hidden;
+	line-height: normal;
+	text-transform: uppercase;
+	vertical-align: top;
+}
+
+.demo .v-inline-datefield-calendarpanel-weeknumbers td {
+	width: 12.5%;
+}
+
+.demo .v-inline-datefield-calendarpanel-weekdays strong {
+	display: block;
+	text-align: right;
+	font-size: 10.4px;
+	padding: 0.3em 0.5em 0.35em 0;
+	height: 1.1em;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	background: #c9c9c9 url(../chameleon/img/grad-dark-top2.png) repeat-x;
+	margin-bottom: 2px;
+}
+
+.demo .v-inline-datefield-calendarpanel .v-first strong {
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.demo .v-inline-datefield-calendarpanel .v-last strong {
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+
+.demo .v-inline-datefield-popup .v-inline-datefield-calendarpanel .v-first strong, .demo .v-inline-datefield-popup .v-inline-datefield-calendarpanel .v-last strong {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.demo .v-inline-datefield-calendarpanel-body td {
+	text-align: right;
+	height: 1.6em;
+}
+
+.demo .v-inline-datefield-calendarpanel-weeknumber {
+	padding: 0.5em 0.5em 0.35em 0;
+	font-size: 11.7px;
+}
+
+.demo .v-inline-datefield-calendarpanel-day, .demo .v-inline-datefield-calendarpanel-day-today {
+	padding: 0.15em 0.5em 0.15em 0;
+	display: block;
+	margin: 1px 1px 1px 0.3em;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-focused, .demo .v-inline-datefield-calendarpanel-day:hover {
+	margin: 0 0 0 0.2em;
+	border: 1px solid #b3b3b3;
+	outline: none;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-today {
+	border: none;
+	background: transparent url(../chameleon/img/grad-dark-top2.png) repeat-x;
+	margin: 0 0 0 0.2em;
+	font-weight: bold;
+	border: 1px solid #c9c9c9;
+}
+
+.demo .v-inline-datefield-calendarpanel-day-selected, .demo .v-inline-datefield-calendarpanel-day-selected:hover {
+	margin: 0 0 0 0.3em;
+	border: none;
+}
+
+.demo .v-inline-datefield-calendarpanel-time select {
+	padding: 0;
+	font-size: 11.7px;
+	margin: 0;
+}
+
+.demo .v-inline-datefield, .demo .v-inline-datefield-calendarpanel-day {
+	line-height: 16px;
+}
+
+.demo .v-filterselect {
+	overflow: hidden;
+	padding-right: 16px;
+}
+
+.demo.v-app input.v-filterselect-input {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	line-height: normal;
+}
+
+.demo.v-app input.v-filterselect-input[type=text] {
+	padding: 0;
+}
+
+.demo .v-filterselect-focus .v-filterselect-input, .demo .v-filterselect .v-filterselect-input:focus {
+	outline: none;
+}
+
+.demo .v-filterselect-big.v-filterselect-search {
+	padding-left: 22px;
+}
+
+.demo .v-filterselect-button {
+	width: 16px;
+	margin-right: -16px;
+	height: 1.2em;
+	background-position: -5px -11px;
+	opacity: 0.4;
+}
+
+.demo .v-filterselect-button:hover {
+	opacity: 0.7;
+}
+
+.demo .v-filterselect-button:active {
+	opacity: 1;
+}
+
+.demo .v-filterselect-small .v-filterselect-button {
+	height: 0.95em;
+	background-position: -5px -12px;
+}
+
+.demo .v-filterselect-suggestpopup {
+	margin-top: 0.4em;
+}
+
+.demo .v-filterselect-suggestmenu tr {
+	line-height: 1.4em;
+}
+
+.demo.v-app .v-filterselect-suggestpopup-small td {
+	font-size: 11.05px;
+}
+
+.demo.v-app .v-filterselect-suggestpopup-big td {
+	font-size: 14.3px;
+}
+
+.demo .v-filterselect-big .v-filterselect-button {
+	height: 1.4em;
+	background-position: -5px -9px;
+}
+
+.demo .v-filterselect-search .v-filterselect-button {
+	width: 0;
+	overflow: hidden;
+	margin-right: 0;
+}
+
+.demo .v-filterselect-prompt .v-filterselect-input {
+	font-style: normal;
+}
+
+.demo .v-filterselect-prevpage-off, .demo .v-filterselect-nextpage-off, .demo .v-filterselect-prevpage, .demo .v-filterselect-nextpage {
+	border-style: solid;
+	border-width: 1px 0;
+	border-color: #b3b3b3;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x;
+	height: 12px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.demo .v-filterselect-prevpage:active, .demo .v-filterselect-nextpage:active {
+	background-image: #c9c9c9 url(../chameleon/img/grad-dark-bottom2.png);
+	background-position: left bottom;
+}
+
+.demo .v-filterselect-prevpage-off span, .demo .v-filterselect-nextpage-off span, .demo .v-filterselect-prevpage span, .demo .v-filterselect-nextpage span {
+	display: block;
+	text-indent: -9999px;
+	height: 12px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat 50% 3px;
+}
+
+.demo .v-filterselect-nextpage-off span, .demo .v-filterselect-nextpage span {
+	background-position: 50% -12px;
+}
+
+.demo .v-filterselect-status {
+	font-size: 11.05px;
+	margin: 1px 0 -3px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.demo .v-filterselect-suggestmenu .gwt-menuItem-selected {
+	background-image: url(../chameleon/img/grad-light-top2.png);
+	background-position: 0 -1px;
+}
+
+.demo .v-filterselect-suggestpopup-small .v-filterselect-status {
+	font-size: 10.4px;
+}
+
+.demo .v-filterselect-suggestpopup-big .v-filterselect-status {
+	font-size: 11.7px;
+}
+
+.demo .v-select-small .v-select-select {
+	font-size: 10.4px;
+}
+
+.demo .v-select-big .v-select-select {
+	font-size: 15.6px;
+}
+
+.demo .v-filterselect-select-button {
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x;
+	position: relative;
+	padding: 0.3em 0.5em;
+}
+
+.demo .v-filterselect-select-button .v-filterselect-input {
+	display: block;
+	width: 100% !important;
+	user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+.demo .v-filterselect-select-button .v-filterselect-button {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-position: 100% -8px;
+}
+
+.demo .v-tabsheet-spacertd div {
+	border-color: #b3b3b3;
+	border-left: none;
+}
+
+.demo .v-tabsheet-tabitem {
+	border: none;
+	border-bottom: 1px solid #b3b3b3;
+	padding: 0;
+}
+
+.demo .v-tabsheet-tabitem .v-caption {
+	padding: 0.2em 0.8em;
+	margin: 1px;
+	margin-bottom: 0;
+}
+
+.demo .v-tabsheet-tabitem-selected {
+	background-color: #c9c9c9;
+	border: 1px solid #b3b3b3;
+	border-bottom: none;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	overflow: hidden;
+}
+
+.demo .v-tabsheet-tabitem-selected .v-caption {
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	margin: 0;
+	padding-bottom: 0.25em;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+}
+
+.demo .v-tabsheet-content {
+	background: #fff;
+	border-color: #b3b3b3;
+}
+
+.demo .v-tabsheet-deco {
+	height: 0;
+	background: transparent;
+	border-top: 1px solid #b3b3b3;
+}
+
+.demo .v-tabsheet-caption-close {
+	width: 14px;
+	height: 15px;
+	overflow: hidden;
+	text-indent: -50px;
+	background: transparent url(../chameleon/img/close-btn.png) no-repeat 0.5em 0;
+	vertical-align: middle;
+	padding: 0 0 0 0.5em;
+	margin: 0.2em 0 0 0;
+}
+
+.demo .v-tabsheet-caption-close:hover {
+	background-position: 0.5em -25px;
+}
+
+.demo .v-tabsheet-caption-close:active {
+	background-position: 0.5em -50px;
+}
+
+.demo .v-tabsheet-scroller {
+	height: 14px;
+	margin-top: -1.6em;
+	position: relative;
+	float: right;
+	background: #c9c9c9 url(../chameleon/img/grad-light-top.png) repeat-x;
+	border: 1px solid #b3b3b3;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+.demo .v-tabsheet-scrollerPrev, .demo .v-tabsheet-scrollerNext, .demo .v-tabsheet-scrollerPrev-disabled, .demo .v-tabsheet-scrollerNext-disabled, .demo .v-tabsheet-scrollerPrev-disabled:active, .demo .v-tabsheet-scrollerNext-disabled:active {
+	padding-top: 12px;
+	border: 1px solid #b3b3b3;
+	border-width: 0;
+	background: transparent url(../chameleon/img/tab-arrows.png) no-repeat 6px 50%;
+	width: 16px;
+	height: 14px;
+	overflow: hidden;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.demo .v-tabsheet-scroller button::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.demo .v-tabsheet-scrollerNext, .demo .v-tabsheet-scrollerNext-disabled, .demo .v-tabsheet-scrollerNext-disabled:active {
+	background-position: -10px 50%;
+	border-left-width: 1px;
+}
+
+.demo .v-tabsheet-scrollerPrev:hover, .demo .v-tabsheet-scrollerNext:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+.demo .v-tabsheet-scrollerPrev:active, .demo .v-tabsheet-scrollerNext:active {
+	opacity: 1;
+	filter: none;
+}
+
+.demo .v-tabsheet-scrollerPrev-disabled, .demo .v-tabsheet-scrollerNext-disabled, .demo .v-tabsheet-scrollerPrev-disabled:active, .demo .v-tabsheet-scrollerNext-disabled:active {
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+}
+
+.demo .v-tabsheet-open-only-closable .v-tabsheet-caption-close {
+	visibility: hidden;
+}
+
+.demo .v-tabsheet-open-only-closable .v-tabsheet-tabitem-selected .v-tabsheet-caption-close {
+	visibility: visible;
+}
+
+.demo .v-tabsheet-borderless .v-tabsheet-content-borderless, .demo .v-tabsheet-deco-borderless {
+	border: none;
+	background: transparent;
+}
+
+.demo .v-tabsheet-tabs-borderless .v-tabsheet-tabitem-selected, .demo .v-tabsheet-tabs-borderless .v-tabsheet-tabitem-selected .v-caption {
+	background-color: transparent;
+}
+
+.demo .v-tree-node-caption {
+	margin-left: 16px;
+}
+
+.demo .v-tree-node span {
+	padding: 0.1em 0.3em;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.demo .v-tree-node-children {
+	padding-left: 16px;
+}
+
+.demo .v-tree-node-selected span {
+	background-color: #333;
+}
+
+.demo .v-tree-connectors .v-tree-node-caption {
+	padding-bottom: 1px;
+}
+
+.demo .v-window {
+	border-radius: 3px;
+}
+
+.demo .v-window-closebox, .demo .v-window-restorebox, .demo .v-window-maximizebox {
+	width: 14px;
+	height: 15px;
+	overflow: hidden;
+	vertical-align: middle;
+	margin: 0;
+	top: 0.3em;
+	z-index: 2;
+}
+
+.demo .v-window-closebox:hover, .demo .v-window-restorebox:hover, .demo .v-window-maximizebox:hover {
+	background-position: 0 -25px;
+}
+
+.demo .v-window-closebox:active, .demo .v-window-restorebox:active, .demo .v-window-maximizebox:active {
+	background-position: 0 -50px;
+}
+
+.demo .v-window-closebox {
+	text-indent: -50px;
+	background: transparent url(../chameleon/img/close-btn.png) no-repeat;
+	right: 0.4em;
+}
+
+.demo .v-window-restorebox, .demo .v-window-maximizebox {
+	right: 1.8em;
+}
+
+.demo .v-window-restorebox {
+	background: transparent url(../chameleon/img/restore.png) no-repeat;
+}
+
+.demo .v-window-maximizebox {
+	background: transparent url(../chameleon/img/maximize.png) no-repeat;
+}
+
+.demo .v-window {
+	background-image: none;
+}
+
+.demo .v-window-wrap {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background-image: url(../chameleon/img/grad-light-top.png);
+	background-repeat: repeat-x;
+}
+
+.demo .v-window-outerheader {
+	padding: 0.2em 1.7em 0.5em 1.2em;
+	height: auto;
+	text-align: center;
+}
+
+.demo .v-window-header {
+	font-weight: normal;
+}
+
+.demo .v-window-footer {
+	height: 0;
+	position: static;
+}
+
+.demo .v-window-resizebox {
+	background: transparent url(../chameleon/img/resize.png) no-repeat;
+	width: 14px;
+	height: 14px;
+	bottom: 0;
+}
+
+.demo .v-horizontallayout-segment .v-button {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border-left-width: 0;
+	zoom: 1;
+	overflow: visible;
+}
+
+.demo .v-horizontallayout-segment .v-button .v-button-wrap {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	zoom: 1;
+}
+
+.demo .v-horizontallayout-segment .first {
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-left-width: 1px;
+}
+
+.demo .v-horizontallayout-segment .first .v-button-wrap {
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.demo .v-horizontallayout-segment .last {
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.demo .v-horizontallayout-segment .last .v-button-wrap {
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.demo .sidebar-menu * {
+	white-space: normal;
+}
+
+.demo .sidebar-menu .v-label {
+	font-size: 11.05px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	padding: 1em 0.9em 0.3em;
+	text-shadow: 0 1px 0 white;
+}
+
+.demo .sidebar-menu .v-nativebutton {
+	width: 100%;
+	padding: 0.1em 1.1em;
+	border: none;
+	background: transparent;
+	text-align: left;
+}
+
+.demo .sidebar-menu .v-nativebutton:focus {
+	outline: none;
+	font-weight: bold;
+}
+
+.demo .sidebar-menu .tab-selected, .demo .sidebar-menu .selected {
+	font-weight: bold;
+	background-color: #333;
+	background-image: url(../chameleon/img/grad-light-top2.png);
+	background-position: 0 -1px;
+	color: #fff;
+}
+
+.demo .sidebar-menu .tab-selected:focus, .demo .sidebar-menu .selected:focus {
+	outline: none;
+}
+
+.demo .sidebar-menu .v-nativebutton::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.demo .v-csslayout-toolbar {
+	background: transparent url(../chameleon/img/grad-light-top.png) repeat-x;
+	border: 1px solid #b3b3b3;
+	border-width: 1px 0;
+}
+
+.demo .v-csslayout-toolbar .v-csslayout-margin {
+	margin: 3px 0.3em 2px;
+	padding-bottom: 1px;
+	overflow: hidden;
+}
+
+.demo .v-csslayout-toolbar .v-button, .demo .v-csslayout-toolbar .segment {
+	margin-right: 2px;
+	float: left;
+}
+
+.demo .v-csslayout-toolbar .segment .v-button {
+	margin-right: 0;
+}
+
+.demo #demo-base-layout {
+	padding: 36px;
+}
+
+.demo .demoContentLayout {
+	background-color: #d1d1cf;
+	background-image: url(images/radial-gradient.png);
+	background-size: 90%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.demo .v-accordion-item-content {
+	background-color: #fff;
+}
+
+.demo .v-accordion-item .v-accordion-item-caption .v-caption .v-captiontext {
+	width: 100%;
+}
+
+.demo .v-accordion-item .v-accordion-item-caption .v-caption .v-accordion-caption-close {
+	margin-bottom: 0.2em;
+	margin-left: -16px;
+}
+
+.demo .v-accordion-item .v-accordion-item-caption .v-caption .v-accordion-caption-close:hover {
+	color: red;
+}
+
+.demo .v-accordion-item .v-accordion-item-caption .v-caption .v-accordion-caption-close:before {
+	margin-left: -0.3em;
+	font-family: "closable_accordion";
+	display: inline-block;
+	font-weight: normal;
+	content: "\e802";
+}

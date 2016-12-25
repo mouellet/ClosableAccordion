@@ -1,0 +1,111 @@
+@import "../chameleon/chameleon.scss";
+
+$gray: #d1d1cf;
+$green: #40b527;
+$darkgreen: darken($green, 30%);
+
+@font-face {
+  font-family: 'closable_accordion';
+  src: url('icons/closable_accordion.eot?70239236');
+  src: url('icons/closable_accordion.eot?70239236#iefix') format('embedded-opentype'),
+       url('icons/closable_accordion.woff?70239236') format('woff'),
+       url('icons/closable_accordion.ttf?70239236') format('truetype'),
+       url('icons/closable_accordion.svg?70239236#closable_accordion') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'closable_accordion';
+    src: url('icons/closable_accordion.svg?70239236#closable_accordion') format('svg');
+  }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "closable_accordion";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-trash:before { content: '\e802'; } /* '' */
+
+// Prefix all selectors in your theme with .demo
+.demo {
+
+	// Include reindeer theme styles in your theme
+	@include chameleon;
+	
+	#demo-base-layout {
+	   padding: 36px;
+	}
+
+	// You can style your demo app right here
+	.demoContentLayout {
+		background-color: $gray;
+		background-image: url(images/radial-gradient.png);
+		background-size: 90%;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	
+	.v-accordion-item-content {
+	   background-color: #fff;
+	}
+
+    .v-accordion-item {
+        .v-accordion-item-caption {
+
+            .v-caption {
+
+                .v-captiontext {
+                    width: 100%;
+                }
+
+                .v-accordion-caption-close {
+                    margin-bottom: .2em;
+                    margin-left: -16px;
+
+                    &:hover {
+                        color: red;
+                    }
+
+                    &:before {
+                        margin-left: -.3em;
+                        font-family: "closable_accordion";
+                        display: inline-block;
+                        font-weight: normal;
+                        content: '\e802';
+                    }
+                }
+            }
+        }
+    }
+
+}
